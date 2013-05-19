@@ -1,0 +1,62 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern} % Pour changer le pack de police
+\usepackage{makeidx}
+\usepackage{graphicx}
+
+\title{JavaScript, un langage web?}
+\author{\textsc{BARASCUT} Jérémy}
+\date{} % Pour mettre la date du jour, tapez \today
+ 
+\title{JavaScript, un langage web?}
+\date{}
+\author{BARASCUT Jérémy}
+\makeindex
+\begin{document}
+ 
+\maketitle
+ 
+\begin{abstract}
+Le résumé (abstract en anglais) de mon article.
+\end{abstract}
+
+
+ 
+ 
+\tableofcontents
+
+% \include{présentation}
+
+%introduction
+\include{introduction}
+\include{histoire}
+\include{ecmascript}
+\include{ajax}
+\include{restfull}
+\include{mvc}
+
+%client
+\include{ember}
+\include{backbone}
+\include{angular}
+
+
+%embarqué
+\include{smartphone}
+\include{phonegap}
+\include{senchaTouch}
+
+
+%plateforme
+\include{wakanda}
+
+
+ 
+Bla\index{bla} bla bla
+ 
+\listoffigures
+\listoftables
+\printindex
+\end{document}
