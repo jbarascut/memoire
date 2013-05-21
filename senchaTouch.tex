@@ -1,105 +1,143 @@
-\chapter{SenchaTouch}
+\section{SenchaTouch}
 \label{ch:senchaTouch}
 
-\section*{Introduction}
+\subsection{Qu’est ce que Sencha Touch?}
 
-Qu’est ce que Sencha Touch
+Sencha Touch est un framework MVC spécialement conçu pour créer des applications web mobile pour les appareils tactile. Sencha Touch permet aux développeurs de créer des applications pour les plateformes mobiles qui disposent de navigateurs supportant les derniers standards, comme le moteur de rendu Webkit.
 
-Sencha Touch est un framework MVC spécialement conçu pour créer des applications web mobile pour les appareils tactile. Sencha Touch permet aux développeurs de créer des applicatiions pour les plateformes mobiles qui disposent de navigateurs supportant les dermiers standards, comme le moteur de rendu Webkit.
-
-Au moment d’écrire ces lignes, la dermière version disponible de Sencha Touch étail la version 2.2.0
+Au moment d’écrire ces lignes, la dernière version disponible de Sencha Touch étail la version 2.2.0
 
 Sencha Touch est un gros framework, qui peut sembler intimidant pour les développeurs JavaScript habitués à utiliser des petites bibliothèques telles que jQuery ou Prototype.
 
-Sencha Touch est conçu comme un tout, y compris la plupart des fonctions es services offerts par d’autres frameworks, et il peut être facilement étendu de nombreuses et différentes façon pour s’adapter aux besoins des développeurs de différents domaines d’expertises
+Sencha Touch est conçu comme un tout, y compris la plupart des fonctions des services offerts par d’autres frameworks, et il peut être facilement étendu de nombreuses et différentes façon pour s’adapter aux besoins des développeurs de différents domaines d’expertises
 
 Vous n’avez généralement pas besoin d’utiliser d’autres bibliothèques que Sencha Touch dans votre projet, si vous avez besoin d’une fonction particulière vous êtes sûr que le framework l’embarque par défaut.
 
-Le choix explicite de Webkit est intéressante, l’équipe de Sencha Touch a pris une décision délibéré de ne pas soutenir d’autres moteurs de navigateurs mobile, tels que Gecko (Firefox), Presto (Opéra), ou Trident (Internet Explorer). Le soutient excusif des navigateurs modernes permet à Sencha Touch d’utiliser de nombreuses technologies Web les plus avancées.
+Le choix explicite de Webkit est intéressante, l’équipe de Sencha Touch a pris une décision délibéré de ne pas soutenir d’autres moteurs de navigateurs mobile, tels que Gecko (Firefox), Presto (Opéra), ou Trident (Internet Explorer). Le soutient exclusif des navigateurs modernes permet à Sencha Touch d’utiliser de nombreuses technologies Web les plus avancées.
 
 Ce choix influe également sur l’expérience du développeur, parce que Safari ou Google Chrome peuvent être utilisé pour déboguer les applications Sencha Touch sur un environnement de bureau comme Linux, Windows ou OS X.
 
-L’équipe de Sencha a récemment annoncé le support pour Internet Explorer 10 pour Windows Phone 8.
+L’équipe de Sencha a récemment annoncé le support d'Internet Explorer 10 pour Windows Phone 8.
 
 Quel type d’application peut-on écrire avec Sencha Touch.
 
 Apple, dans l’une des premières version de son guide sur les directives de design pour IOS a énoncé qu’il existe trois grands types d’applications moblles qui peuvent être créé pour l’iPhone.
 
-    les applications utilitaires, comme la météo ou les informations d’informations de stock.
 
-    Les applications de productions, comme les applications d’affaires ou orientés document.
+\begin{itemize}
 
-    Les applications immersives comme les jeux vidéo.
+  \item[\textbullet]
+  les applications utilitaires, comme la météo ou les informations d’informations de stock.
+
+  \item[\textbullet]
+  Les applications de productions, comme les applications d’affaires ou orientés document.
+
+  \item[\textbullet]
+  Les applications immersives comme les jeux vidéo.
+
+\end{itemize}
 
 Suite à cette taxonomie simple, Sencha Touch est plus apapté pour des applications délivrant les deux premiers types. Bien qu’il est certainement possible de créer des jeux ou d’autres types d’applications mettant en vedette des expériences utilisateurs complexe, ce mémoire ne couvre que la problématique des applications des deux premiers types.
 
-Un peu d’histoire
+\subsection{Un peu d’histoire}
 
-Retour en 2005, le mouvement web 2.0 est en train de transformer radicalement la notion de contenu web. Les sites en AJAX comme Gmail ont montré au public qu’un nouveau type d’interaction était possible, qu’un nouveau type de contenu a pu être proposé dans les pages web classiques sans l’aide d'extension propriétaires. Douglas Crockford expliquait que JavaScript était un grand langage incompris par beaucoup, et les bibliothèques comme script.aculo.us et Prototype offrait aux développeurs de concrètes et solides raison pour développer des applications cross-plateformes.
+Retour en 2005, le mouvement web 2.0 est en train de transformer radicalement la notion de contenu web. Les sites en AJAX comme Gmail ont montré au public qu’un nouveau type d’interaction était possible, qu’un nouveau type de contenu a pu être proposé dans les pages web classiques sans l’aide d'extension propriétaires. Douglas Crockford expliquait que JavaScript était un grand langage incompris par beaucoup, et les bibliothèques comme Script.aculo.us et Prototype offrait aux développeurs de concrètes et solides raison pour développer des applications cross-plateformes.
 
-Au milieu de toute cette agitation , Yahoo a publié la première version de sa bibliothèque YUI, permettant de développer des applications complexes à la “desktop-like”à travers les systmèmes d’exploitations et navigateurs. YUI peut être considéré comme une oeuvre précurseur, après quoi plusieurs autres bibliothèques sont apparus au fil des ans.
+Au milieu de toute cette agitation , Yahoo a publié la première version de sa bibliothèque YUI, permettant de développer des applications complexes à la “desktop-like” à travers les systèmes d’exploitations et navigateurs. YUI peut être considéré comme une œuvre précurseur, après quoi plusieurs autres bibliothèques sont apparus au fil des ans.
 
-Pendant ce temps, Jack Slocum a commencé à travailler sur un ensemble d’extensions pour YUI appelé YUI-Ext. Après quelques versions, l’interêt pour sa bibliothèques a tellement augmenté qu’il à supprimé l’obligation d’utiliser YUI en complément, rendant la bibliothèque en mesure d’utiliser Prototype, YUI pour un niveau de compatiblité cross-plateformes.
+Pendant ce temps, Jack Slocum a commencé à travailler sur un ensemble d’extensions pour YUI appelé YUI-Ext. Après quelques versions, l’interêt pour sa bibliothèques a tellement augmenté qu’il à supprimé l’obligation d’utiliser YUI en complément, rendant la bibliothèque en mesure d’utiliser Prototype et/ou YUI pour un niveau de compatiblité cross-plateformes.
 
-Ext JS est né.
+\subsection{Ext JS est né}
 
 Pendant des années, Ext JS a établi la norme en terme de compatibilité cross-browser et de conception, permettant aux développeurs de créer des applications de navigation complexe en une fraction de temps, et sans avoir à se soucier des problèmes de compatibilité entre navigateurs. En 2009, la société derrière Ext JS incorporé comme Sencha Inc, dont le siège se trouve à Redwood City, en Californie.
 
 En 2009, la hausse des martphone à écran tactile et, plus tard, ‘liPad, a incité l’équipe d’ Ext JS à créer une version du framework orienté exclusivement pour ces nouveaux dispositifs: le résultat de leurs efforts est Sencha Touch, sortie en version1.0 à la fin 2010.
 
-La première version de Sencha Touch nétait pas totalement compatible avec le version courante d’Ext JS, et il a aussi été critiqué pour ses relatives faibles performance, en particuilier sur les anciens appariels tels que l’iPhone 3G. Pour répondre à ces quiestion, Sencha Touch 2 a été publié en Mars 2012 offrant un tout nouveau moteur de rendu basé à 100% sur Cascading Style Sheet (CSS), et un nouveau système de classe compatible avec Ext JS 4
+La première version de Sencha Touch nétait pas totalement compatible avec le version courante d’Ext JS, et il a aussi été critiqué pour ses relatives faibles performance, en particulier sur les anciens appareils tels que l’iPhone 3G. Pour répondre à ces question, Sencha Touch 2 a été publié en Mars 2012 offrant un tout nouveau moteur de rendu basé à 100\% sur Cascading Style Sheet (CSS), et un nouveau système de classe compatible avec Ext JS 4
 
-Caractéristiques principales:
+\subsection{Caractéristiques principales}
 
-Sencha Touch est plus que juste un framework complet orienté vers la création de services et d’applications orienté productivité,  il est en fait un système web complet d’entreprise pour application cross-plateforme, avec les caractéristiques suivantes:
 
-    Nombreux widget disponibles, largement inspiré par iOS, tant dans la conception que dans les fonctionnalités.
 
-    Moteur de rendu rapide basé sur CSS, qui peut etre accéléré par le matériel des les smartphones moderne.
+Sencha Touch est plus que juste un framework complet orienté vers la création de services et d’applications orienté productivité,  il est en fait un système web complet d’entreprise pour application cross-plateforme, avec 
+les caractéristiques suivantes:
 
-    Une architecture bien définie,  Sencha Touch utilise une architecture MVC.
+\begin{itemize}
 
-    Des connecteurs intégrés pour les serveurs de transfert de données réseau, telles que les services web REST et le soutiens aux application web offline mobile.
+  \item[\textbullet]
+  Nombreux widget disponibles, largement inspiré par iOS, tant dans la conception que dans les fonctionnalités.
 
-    Un système de construction de ligne de commande, la gestion de la fusion et de la minfication du code de l’application, ainsi que la création d’applications natives pour Android et iOS.
+  \item[\textbullet]
+  Moteur de rendu rapide basé sur CSS, qui peut être accéléré par le matériel dès les smartphones moderne.
 
-Une documentation complète est disponible comme un ensemble de pages HTML dynamiques, y compris la recherche et le filtrage des fonctionnailités sans nécessiter d’infrastructure serveur.
+  \item[\textbullet]
+  Une architecture bien définie,  Sencha Touch utilise une architecture MVC.
 
-Sencha Touch peut être considéré comme un framework “tout en un”, y compris toutes les API et outilis nécessaire pour créer vos applications mobiles.
+  \item[\textbullet]
+  Des connecteurs intégrés pour les serveurs de transfert de données réseau, telles que les services web REST et le soutiens aux application web offline mobile.
 
-Supprt appareils et navigateurs
+  \item[\textbullet]
+  Un système de construction de ligne de commande, la gestion de la fusion et de la minification du code de l’application, ainsi que la création d’applications natives pour Android et iOS.
+
+\end{itemize}
+
+Une documentation complète est disponible comme un ensemble de pages HTML dynamiques, y compris la recherche et le filtrage des fonctionnalités sans nécessiter d’infrastructure serveur.
+
+Sencha Touch peut être considéré comme un framework “tout en un”, y compris toutes les API et outils nécessaire pour créer vos applications mobiles.
+
+
+
+\subsection{Supprt appareils et navigateurs}
 
 Sencha Touch au moment d’écrire ces lignes ne supporte que les plateformes suivantes:
 
-    iOS depuis la version 3
+\begin{itemize}
 
-    Android depuis la version 2.3
+  \item[\textbullet]
+  iOS depuis la version 3
 
-    BlackBerry OS depuis la version 6 (uniquement pour les appareils équipés de WebKit)
+  \item[\textbullet]
+  Android depuis la version 2.3
 
-    Windows Phone 8
+  \item[\textbullet]
+  BlackBerry OS depuis la version 6 (uniquement pour les appareils équipés de WebKit)
 
-Sencha Touch est un framework basé à 100% sur le navigateurs, et vous pouvez déployer vos applications Sencha Touch en utilisant n’importe qu’elle technologie coté serveur, à l’instar de PHP, Java, Ruby on Rails, .Net ou tout autre langage de votre choix.
+  \item[\textbullet]
+  Windows Phone 8
+
+\end{itemize}
+
+Sencha Touch est un framework basé à 100\% sur le navigateurs, et vous pouvez déployer vos applications Sencha Touch en utilisant n’importe quelle technologie coté serveur, à l’instar de PHP, Java, Ruby on Rails, .Net ou tout autre langage de votre choix.
 
 
-Licence
+\subsection{Licence}
 
 Sencha Touch est disponible sous plusieurs licences:
 
 Pour des projets open-source:
 
-    Si vous prévoyer de distribuer votre application en divulgant pleinement le code source, il y’a une version de Sencha Touch distribué sous licence GPLv3
+\begin{itemize}
 
-    Si vous ne souhaitez pas utiliser la licence GPLv3, il y’a une licence la  licence FLOSS de disponible.
+  \item[\textbullet]
+  Si vous prévoyer de distribuer votre application en divulgant pleinement le code source, il y’a une version de Sencha Touch distribué sous licence GPLv3
+
+  \item[\textbullet]
+  Si vous ne souhaitez pas utiliser la licence GPLv3, vous pouvez également utiliser la licence FLOSS.
+\end{itemize}
+
 
 
 Pour des projets commerciaux:
+\begin{itemize}
+  \item[\textbullet]
+  Vous pouvez utiliser Sencha Touch gratuitement, sans aucun frais que se soit par applications, par utilisateur ou par développeur
 
-    Vous pouvez utiliser Sencha Touch gratuitementsans aucun frais, sans aucun frais que se soit par applications, par utilisateur ou par développeur
+  \item[\textbullet]
+  Pour les applications embarquées, vous pouvez utiliser Sencha Touch gratuitement jusqu’à 5000 installations.
 
-    Pour les applications embarquées, vous pouvez utiliser Sencha Touch gratuitement jusqu’a 5000 installations.
-
-    Enfin, une licence OEM commercial est disponible aussi bien pour les entreprises désireuses de distribuer Sencha Touch comme unepartie de leurs propres applications ou services commerciales.
+\end{itemize}
+  
+Enfin, une licence OEM commercial est disponible aussi bien pour les entreprises désireuses de distribuer Sencha Touch comme une partie de leurs propres applications ou services commerciales.
 
 
 

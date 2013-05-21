@@ -1,28 +1,32 @@
-\chapter{Histoire de JavaScript}
+\section{Histoire de JavaScript}
 \label{ch:histoire}
 
-\section*{Introduction}
+\subsection{Présentation}
 
 
 Javascript (js pour les intimes) est un langage de script créé en 1995 par Brendan Eich pour le compte de Netscape Communications.
 
-A cet époque Netscape Communications domine le marché du web. La firme fournissant le navigateur web le plus populaire Netcape Navigator mais aussi des logiciels serveurs.
+A cet époque Netscape Communications domine le marché du web. La firme fournie le navigateur web le plus populaire Netcape Navigator mais aussi des logiciels serveurs.
 
-Netcape Communications lançait un partenariat avec Sun Microsystems pour exploiter leur nouveau langage ainsi que sa VM multi-plateforme, Java. Le but étant d’utiliser java au sein du navigateur que coté serveur afin de fournir des UI riche portable ainsi qu’un moyen d’accéder à des applications via le web à travers un simple navigateur.
+Netcape Communications lançait un partenariat avec Sun Microsystems pour exploiter leur nouveau langage ainsi que sa VM multi-plateforme, Java. Le but étant d’utiliser Java au sein du navigateur du coté serveur afin de fournir des UI riche portable ainsi qu’un moyen d’accéder à des applications via le web à travers un simple navigateur.
 
 Cependant, Java est perçu par Sun et Netscape comme un langage peu adapté à une utilisation simple applicable à la page web car trop professionnel et contraignant. Java est à l’époque en concurrence avec Visual C++ de Microsoft. Il faut donc un langage plus simple à écrire, plus facile à utiliser pour les développeurs débutant et à prendre en main.
 
-Netscape et Sun décide de créer un nouveau langage répondant à cet demande et en confie la création a Brendan Eich, gourou technique chez Netscape. La seule condition est que le langage doit être “dans le style java”  mais en moins puissant et clairement différenciés de java par les potentiels développeurs.
+Netscape et Sun décide de créer un nouveau langage répondant à cette demande et en confie la création a Brendan Eich, gourou technique chez Netscape. La seule condition est que le langage doit être “dans le style java”  mais en moins puissant et clairement différenciés de java par les potentiels développeurs.
 
-Comme l’a expliqué Brendan dans une interview :
+Comme l’a expliqué Brendan Eich dans une interview :
+
+
+\begin{quotation}
+
 
 JS devait « ressembler à Java », mais en moins avancé, [il devait] être le petit frère simplet de Java, son partenaire-otage. Et par-dessus le marché, je n’avais que dix jours pour pondre ça, ou on se retrouverait avec un truc pire que JS.
 
-Brendan Eich
+\end{quotation}
 
-Javascript utilise la même syntax que Java (JS 1.0, mot-clés réservé et convention du JDK) mais il a du s’abstenir d’utiliser la syntaxe orientée-objet du langage, à une époque ou la POO (Porgrammation Orientée Objet) était encore considérée comme un sujet réservé aux professionnels...
+Javascript utilise la même syntaxe que Java (JS 1.0, mot-clés réservé et convention du JDK) mais il a du s’abstenir d’utiliser la syntaxe orientée-objet du langage, à une époque où la POO (Porgrammation Orientée Objet) était encore considérée comme un sujet réservé aux professionnels...
 
-Brendan ne voulant pas pondre un langage diminué, il du trouver des ruses pour y glisser assez de puissance sans que celle-ci soit immédiatement visible au profrane. Le langage devait rester simple et léger en apparance, tout en ayant assez de sophistication pour que des développeurs avancés soient à même d’en tirer des applications puissantes.
+Brendan ne voulant pas pondre un langage diminué, il du trouver des ruses pour y glisser assez de puissance sans que celle-ci soit immédiatement visible au profane. Le langage devait rester simple et léger en apparence, tout en ayant assez de sophistication pour que des développeurs avancés soient à même d’en tirer des applications puissantes.
 
 Même si Javascript et Java appartiennent à une famille syntaxique “de type C” (syntaxe des identifiants, accolades, opérateurs principaux, structures de contrôle...), ils ont des sémantiques extrêmement différentes. Javascript à une philosophie très fortement inspirée de langage objet ou fonctionnels “purs” au premier rang desquels Scheme et Self, mais aussi certains aspects de LISP et SmallTalk.
 
@@ -32,11 +36,11 @@ Java utilise un modèle d’héritage “classique”, mono-parent, basé sur l�
 
 Les deux langages sont donc extrêment différents, à un niveau philosophique, fondamental et pratique.
 
-Nom de code Mocha,
+\subsection{Nom de code Mocha}
 
 JavaScript est développé sous le nom de code Mocha. Son nom officiel étant LiveScript. Dans les deux premières versions beta de Netscapa Navigator 2.0, en septembre 1995, on trouve en effet LiveScript. A cet époque Miscrosoft n’avait pas encore collé une connotation négative à “Live”.
 
-Cependant les marketeux ont voulu insister sur le rôle “collaboratif” de ca langage et tenter de récupérer un peu du prestique issu du marketing de Sun autour de Java. Du coup Brendan a du rennomer LiveScript en JavaScript.
+Cependant les marketeux ont voulu insister sur le rôle “collaboratif” de ca langage et tenter de récupérer un peu du prestige issu du marketing de Sun autour de Java. Du coup Brendan a du renommer LiveScript en JavaScript.
 
 Peu de temps après (1996-1997), Netscape voulut faire bénéficier à JavaScript d’un processus formel de standardisation. ISO, IETF et le jeune W3C posaient chacun des problèmes distincts dans cet standardisation. L’ECMA (European Computer Manufacturers Association), un organisme de standardisation européen, en récupéra le bébé. Ainsi est sorti la première édition du standard ECMA-262 Ed. 1: ECMAScript est le nom de la norme officielle, JavaScript étant la plus connue des implémentations. ActionScript 3 est une autre implémentation bien connue de ECMAScript, avec des extensions.
 
@@ -50,27 +54,23 @@ Ainsi, avec Macromedia (racheté par Adobe), le travail a redémarré sur ECMASc
 
 Hélas, en 2007, Doug Crokfort puis Yahoo ont uni leurs forces avec Microsoft pour s’opposer à ECMAScript 4, ce qui a conduit à la spécification ECMAScript 3.1 effort.
 
-Pendant que les géant s’affrontait, la communautés de développeur open source c’est mise au travail pour révolutionner ce que l’on pouvait faire avec JavaScript. Cet effort collectif a été déclenchée en 2005, lorsque Jesse James Garrett a publié un livre blanc dans lequel il a inventé le terme Ajax. Dans ce livre blanc, il décrit un ensemble de technologies, donc l’épine dorsale est JavaScript. La technologie est utilisé pour créer des applications web où les données peuvent être chargées en arrière-plan, en évitant la nécessité de recharger la page entière et aboutissant ) des applications plus dynamiques. Suite à ce livre blanc, il en est résulté une période de renaissance de l’utilisation de JavaScript dirigé par les bibliothèques open source et les communautés qui se sont foprmées autour d’elles. Ainsi est né des bibliothèques comme Prototype, JQuery, Dojo, Motools et bien d’autres.
+Pendant que les géant s’affrontait, la communautés de développeur open source c’est mise au travail pour révolutionner ce que l’on pouvait faire avec JavaScript. Cet effort collectif a été déclenchée en 2005, lorsque Jesse James Garrett a publié un livre blanc dans lequel il inventa le terme Ajax. Dans ce livre blanc, il décrit un ensemble de technologies, donc l’épine dorsale est JavaScript. La technologie est utilisé pour créer des applications web où les données peuvent être chargées en arrière-plan, en évitant la nécessité de recharger la page entière et aboutissant à des applications plus dynamiques. Suite à ce livre blanc, il en est résulté une période de renaissance de l’utilisation de JavaScript dirigé par les bibliothèques open source et les communautés qui se sont formées autour d’elles. Ainsi est né des bibliothèques comme Prototype, JQuery, Dojo, Motools et bien d’autres.
 
-En juillet 2008, les parties conflictueuses se sont réunis à Oslo. Cela a conduit début 2009 à l’accord final de renommer ECMAScript 2.1 à ECMAScript 5 et à condire le langage vers l’avant avec la futur norme connu sous le nom d’armonie.
+En juillet 2008, les parties conflictuelles se sont réunis à Oslo. Cela a conduit début 2009 à l’accord final de renommer ECMAScript 2.1 à ECMAScript 5 et à condire le langage vers l’avant avec la futur norme connu sous le nom de "Harmony".
 
 
-La 3ème édition (ES3) consitue le socle de la version la plus utilisée/répandue du langage. La 4ème est morte-née, et la 5ème (ES5), désormais implémentés dans tous les navigateurs modernes, sert de socle aux applis web modernes ainsi qu’à JS côté serveur (avec notament Node.js).
+La 3ème édition (ES3) consitue le socle de la version la plus utilisée/répandue du langage. La 4ème est morte-née, et la 5ème (ES5), désormais implémentés dans tous les navigateurs modernes, sert de socle aux applications web modernes ainsi qu’à JavaScript côté serveur (avec notament Node.js).
 
-Tout cela nous amène à aujourd’hui, JavaScript entre dans un cycle complételent nouveau et passionant dans son évolution, son innovation et sa normalisation, avec de nouveaux développement tels que nodejs, afin d’utiliser JavaScript coté serveur. L’arrivé de HTML5 dans le monde du web va également transformer l’évolution de JavaScript grace au HTML5 APIs afin de controler les navigateurs coté-client, utiliser les web-sockets pour toujours plus de commuinications, obtenir des données sur des fonctionalités tels que l’acceleromètre, la localisation GPS, et plus encore.
+Tout cela nous amène à aujourd’hui, JavaScript entre dans un cycle complètement nouveau et passionnant dans son évolution, son innovation et sa normalisation, avec de nouveaux développement tels que Node.js, afin d’utiliser JavaScript coté serveur. L’arrivé de HTML5 dans le monde du web va également transformer l’évolution de JavaScript grâce au HTML5 APIs afin de controler les navigateurs coté-client, utiliser les web-sockets pour toujours plus de communications, obtenir des données sur des fonctionnalités tels que l'accéléromètre, la localisation GPS, et bien plus encore.
 
 Actuellement JavaScript est disponible de base sur davantage de périphériques et de plates-formes que Java.
 
-Même si l’explosion d’Android a fortement relancé le déploiement de Java qui s’enorgueillit de “plusieurs milliards de périphériques installés”, Java n’est pas tellement déployé sur d’autres plates-formes mobiles, et n’est pas non plus automatiquement présent sur toutes les plates-formes desktop.
+Même si l'explosion d’Android a fortement relancé le déploiement de Java qui s'enorgueillit de " plusieurs milliards de périphériques installés ”, Java n’est pas tellement déployé sur d’autres plates-formes mobiles, et n’est pas non plus automatiquement présent sur toutes les plates-formes desktop.
 
 Allez trouver un seul desktop, laptop, smartphone, tablette ou liseuse qui n’ait pas une runtime JavaScript installé et qui s’en serve intensivement !
 
-Dans certains cas, comme webOs, Firefox Mobile OS, JavaScript est au coeur-même de la plate-forme, constituant sa clé de voûte.
+Dans certains cas, comme webOs, Firefox Mobile, JavaScript est au cœur-même de la plateforme, constituant sa clé de voûte.
 
-iOS, Android, Windows Phone et Blackberry ont une tendante forte à utiliser des web apps reposant très lourdement sur JavaScript. Petit à petit, les technologies collectivement appelées “HTML5” remplacent ce pourquoi on avait encore recours aux applets ou, plus souvent, à Flash.
+iOS, Android, Windows Phone et Blackberry ont une tendance forte à utiliser des web apps reposant très lourdement sur JavaScript. Petit à petit, les technologies collectivement appelées “HTML5” remplacent ce pourquoi on avait encore recours aux applets ou, plus souvent, à Flash.
 
 Ainsi commence la révolution JavaScript.
-
-
-
-

@@ -1,0 +1,109 @@
+\section{JQuery}
+\label{ch:jQuery}
+
+\subsection{Introduction}
+
+Au cours des dernières années, JavaScript a subi une transformation remarquable. Où une fois l'idée d'un langage jouet relégué au second plan, c'est aujourd'hui l'un des langage de programmation les plus importants dans la monde. 
+
+Avec l'importance grandissante du développement basé sur Ajax, la montée des bibliothèques JavaScript augmentent et la stigmatisation entourant JavaScript à pratiquement disparu.
+
+Il faut reconnaître que la bibliothèque la plus populaire et user-friendly, jQuery est en partie responsable de ce progrès.
+
+jQuery est plus qu'un simple choix de débutant, il est en réalité utilisé par certaines des plus grandes organisations dans le monde, ajoutant de l'interactivité à des milliards de pages vues chaque mois. Google, Microsoft, Amazon, IBM, Twitter, NBC, Best Buy et Dell ne sont que quelques une des entreprises utilisant jQuery en production. Avec une très grande utilisation dans le monde, il n'est donc pas surprenant que jQuery évolue à une grande vitesse. 
+
+jQuery continue de s'épanouir et les développeurs du monde entier contribuent aux fixes des bugs, des plugins et des travaux sur des projets connexes comme jQuery UI et QUnit. Ce regain d'activité assure que jQuery représente une option complète pour tout développeur cherchant à faire du développement JavaScript de catégorie mondiale.
+
+Cela est vrai quelle que soit la philosophie ou la technique de développement utilisé: jQuery est utilisé peut importe le langage coté serveur tel que : Java/Spring, PHP, .NET, Ruby on Rails, Python/Django par exemple.
+
+jQuery est une bibliothèque JavaScript qui porte sur l'interaction entre JavaScript (comprenant AJAX) et HTML, et a pour but de simplifier des commandes communes de JavaScript. Jquery se caractérise par un ensemble de fonctions qui permettent d’offrir une alternative à la programmation JavaScript de façon uniforme sur les navigateurs les plus courants et permet par exemple de manipuler aisément le DOM, de créer des animations etc… mais surtout de gagner du temps dans le développement des applications : « write less, do more ».
+
+La librairie est sous licence GPL et MIT, et donc complètement réutilisable sur des travaux professionnels. De plus la librairie à l’avantage d’être compatible avec d’autre librairie JavaScript. 
+
+\begin{itemize}
+  \item[\textbullet]
+  C'est une bibliothèque puissante. Le système jQuery réalise toutes sortes de tâches impressionnantes pour simplifier l'écriture de votre JavaScript.
+  
+  \item[\textbullet]
+  Elle est légère. Il faut inclure une référence à votre bibliothèque dans chaque fichier qui l'utilise. La bibliothèque jQuery fait 26 ko (dans sa version compressée), une taille inférieure à certains fichiers image. Elle n'a donc aucun impact significatif sur la vitesse de chargement.
+  
+  \item[\textbullet]
+  Elle prend en charge un mécanisme de sélection flexible. jQuery simplifie et développe le mécanisme document.getElementById, essentiel pour la manipulation du DOM.
+  
+    \item[\textbullet]
+    Elle dispose d'un excellent support d'animation. Vous pouvez utiliser jQuery pour afficher et masquer, déplacer et glisser des éléments.
+    
+    \item[\textbullet]
+    Elle rend les requêtes AJAX évidentes. Vous allez être surpris par la facilité d'utiliser AJAX avec jQuery.
+      
+    \item[\textbullet]
+    Elle possède un mécanisme d'évènement amélioré. JavaScript dispose d'un support très limité pour les évènements. jQuery offre un outil très puissant pour ajouter un gestionnaire d'évènement à presque tous les éléments.
+    
+    \item[\textbullet]
+    Elle fournit un support multiplateforme. La bibliothèque jQuery tente de gérer des questions de compatibilité de navigateur pour vous. Ainsi, vous n'avez pas à vous soucier d'éventuels problèmes de navigateurs.
+    
+    \item[\textbullet]
+    Elle prend en charge les composants d'interface utilisateur. jQuery propose une bibliothèque d'interface utilisateur puissante qui compte des outils que HTML n'a pas, comme les contrôles glisser-déposer, les sliders et les calendriers.
+
+    
+    \item[\textbullet]
+    Elle est évolutive. jQuery possède une bibliothèque d'extension qui accepte tous types de fonctionnalités optionnelles, y compris de nouveaux composants et outils tels que l'intégration de son, les galeries d'images, les menus, etc.
+    
+    \item[\textbullet]
+    Elle introduit de nouvelles idées de programmation. jQuery est l'outil idéal pour découvrir des idées intéressantes comme la programmation fonctionnelle et les objets chaînables.
+    
+    \item[\textbullet]
+    Elle est gratuite et open-source. jQuery est disponible en licence open-source, ce qui signifie que son utilisation est gratuite et que vous pouvez la consulter et la modifier si vous le souhaitez.
+    
+    \item[\textbullet]
+    Elle est tout de même classique. Si vous décidez d'utiliser une autre bibliothèque AJAX, vous pourrez y exploiter les enseignements acquis dans jQuery.
+
+\end{itemize}
+
+\subsection{Document Object Model (DOM) }
+
+Quand vous regardez un site web, vous voyez beaucoup d'éléments regroupés et assemblés pour former ce qui est en face de vous. Pour pouvoir accéder à ces éléments pour supprimer, ajouter et manipuler ces éléments, vous avez besoin d'un certaine formes d'interface, d'une représentation des éléments dans une page structuré et qui suit un ensemble de règle sur la manière de les modéliser. C'est ce qu'on appelle le DOM. Le DOM nous permet aussi de capturer dans le navigateur un événement comme lorsqu'un utilisateur clique sur un lien, soumet un formulaire, ou défiler la page.
+
+Dans les premiers jours du web et des navigateurs, les normes en matières de mise en œuvre de JavaScript n'était pas efficace. Cela a conduit les navigateurs à intégré leur propre mise en œuvre de JavaScript créant des caractéristiques d'applications différentes causant des problèmes aux développeurs d'applications.
+Ainsi pour développer une application JavaScript il  faut la coder pour chaque navigateur, ceux ci avait des implémentations différentes principalement entre Netscape et Internet Explorer.
+
+Heureusement les choses ont progressé, les navigateurs optent actuellement pur les mêmes normes et les choses se sont stabilisés. Toutefois, le niveau auquel les navigateurs supportent le DOM peut encore pauser des problèmes aujourd'hui. En particulier avec les version d'Internet Explorer 6, 7 et 8 qui ne supporte pas le DOM au même niveau que les navigateurs les plus modernes. 
+
+C'est une des raison pour lesquels jQuery est si précieux: tout ce quelle offre fonctionne aussi bien dans une version antérieur de Internet Explorer que la dernière version de Google Chrome ou Mozilla Firefox.
+
+Afin d'avoir des bases solides pour la suite, je vais prendre la peine de présenter le façon dont le DOM est mise en œuvre.
+
+Quand une page est chargée, le navigateur génère une représentation de ce qui est sur la page, et pour chaque élément il génère un ou plusieurs nœuds qui le représentent. Lorsque vous travaillez avec JavaScript, le DOM (suivant les implémentation différentes des navigateurs) peut provoquer des problèmes et conduire à passer beaucoup de temps sur des solutions de contournement, mais la beauté d'un framework comme jQuery permet de régler ce soucis.
+Lorsqu'un navigateur forme une représentation de la page en cours avec le DOM, chaque élément est un nœud. Prenons l'exemple d'un paragraphe avec du texte un l'intérieur, tels que:
+
+<p>Hello World</p>
+
+Ce n'est pas un, mais deux nœuds. Il y'a un nœud de type texte qui contient "Hello World" et un nœud de type élément qui est la paragraphe. Le nœud de type texte est un enfant du nœud de type élément parce qu'il réside en son sein. Dans une page type, il existe beaucoup de nœuds imbriqués. Un div avec deux paragraphes composé de texte à l'intérieur s'articule comme ceci: 
+
+div element node
+-- paragraph element node
+---- text node
+-- paragraph element node
+---- text node
+
+Les deux paragraphes de cette instance sont frères parce qu'ils ont le même nœud parent. Les paragraphes sont enfants de la div, mais les nœuds de type texte ne sont pas des nœuds enfants parce qu'ils ne sont pas descendants directs de l'élément div.
+Ils sont les nœuds enfants des nœuds de type paragraphe. Il existe trois principaux types de nœuds que vous devez savoir: élément, texte et attribut. 
+
+\subsection{Les autres forces de jQuery }
+
+Pour finir avec jQuery j'ajouterai quelques autres détails qui permettrons d'expliquer pourquoi jQuery à permit à JavaScript de prendre son envol.
+
+\begin{itemize}
+
+  \item[\textbullet]
+  La documentation officielle est très fournie et de grande qualité ;
+  
+  \item[\textbullet]
+  La communauté qui gravite autour de jQuery est en perpétuelle expansion et elle fournit un support de qualité ;
+  
+  \item[\textbullet]
+  De nombreux acteurs de premier plan du Web (Microsoft, Google, Amazon, Twitter, Mozilla, etc.) utilisent jQuery ;
+  
+  \item[\textbullet]
+  Une foultitude de plugins est disponible afin d'augmenter les possibilités de base de jQuery.  
+  
+\end{itemize}

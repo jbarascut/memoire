@@ -1,0 +1,161 @@
+\section{JQuery Mobile}
+\label{ch:jquery mobile}
+
+\subsection{Introduction}
+
+jQuery mobile est un framework open source JavaScript UI construit sur la populaire bibliothèque jQuery, créé par John Resig au cours de la dernière décennie.
+
+Le développement de jQuery mobile a commencé mi-2010, et est rapidement devenu l’un des frameworks JavaScript les plus populaires. Aujourd’hui jQuery Mobile est utilisé dans plus d’application web mobile que n'importe quel autres framework.
+
+jQuery Mobile est un projet open source, hébergé sur Github et avec un site internet très complet, énormément de documentation, d’éxemples et de références à des applications créées avec ce framework.
+Au moment d’écrire ces ligne, la version actuelle de jQuery Mobile est la version  1.3.1.
+
+\subsection{Plateformes supportés}
+
+jQuery Mobile fonctionne sur la grande majorité des pc moderne, smartphone et tablette et des plateformes eReader.
+
+En outre, les téléphones et les navigateurs plus ancien sont également supportés en raison d’une évolution progressive. C’est probablement l’une des caractéristiques les plus importes de jQuery Mobile
+
+\subsection{Compatibilité}
+
+Les utilisateurs des navigateurs mobiles les plus avancés peuvent profiter de l’une expérience plus complète, avec des transitions de pages animées basées sur Ajax. Au moment d’écrire ces lignes cette liste comprend les systèmes / navigateurs suivant
+
+\begin{itemize}
+  \item[\textbullet]
+  iOS depuis la version 3.2
+  
+  \item[\textbullet]
+  Android depuis la version 2.1
+  
+  \item[\textbullet]
+  Windows Phone depuis la version 7
+  
+  \item[\textbullet]
+  BlackBerry depuis la version 6, notament Playbook
+  
+  \item[\textbullet]
+  Palm WebOS depuis la version 1.4
+  
+  \item[\textbullet]
+  Firefox mobile depuis le 10 bêta
+  
+  \item[\textbullet]
+  Skyfire depuis la version 4.1
+  
+  \item[\textbullet]
+  Meego depuis la version 1.2
+  
+  \item[\textbullet]
+  Samsung Bada depuis la version 2.0
+  
+  \item[\textbullet]
+  Navigateur UC 
+  
+  \item[\textbullet]
+  Kindle et Kindle Fire
+
+  \item[\textbullet]
+  Nook Color depuis la version 1.4.1
+
+\end{itemize}
+
+Une liste impressionante! Toutes les plateformes importantes de smartphone à écran tactile sont aujourd’hui disponilbe et sont représentée et soutenue par jQuery Mobile.
+
+Sur les plateformes de bureau, jQuery Mobile est compatible avec Windows, Linux et Mac OS X sur les versions des navigateurs suivants:
+
+\begin{itemize}
+  \item[\textbullet]
+  Firefox depuis la version 4
+  
+  \item[\textbullet]
+  Chrome depuis la version 11
+  
+  \item[\textbullet]
+  Safari deuis la version 4
+  
+  \item[\textbullet]
+  Internet Explorer depuis la version 7
+  
+  \item[\textbullet]
+  Opéra depuis la version 10
+
+\end{itemize}
+
+
+Un des plus grands avantages en regardant les listes ci-dessus, c’est que jQuery Mobile est l’un des frameworks les plus largement compatibles aujourd’hui. Même mieux, son grand suport des navigateurs de bureau permettent aux développeurs d’utiliser différentes plateformes pour construire et tester leurs applications.
+
+Etant donné que les versions les plus récentes de ces navigateurs intègrent des outils de développement, elle augmentent aussi sont attrait auprès des développeurs.
+
+\subsection{Compatibilités avec les anciennes plateformes mobiles}
+
+Mais que faire si nos utilisateurs ou les exigences précisent certaines anciennes plateforme?
+
+Est-ce que jQuery Mobile peut nous aider dans ce cas?
+
+Les applications jQuery Mobile sont construit avec une dégration progessive par défaut. Les anciennes plateformes, incapable d’afficher les dernières normes CSS et JavaScript, vont tranquillement affichés par défaut la structure HTML des applications, ce qui pourrait ou non être la solution idéale, mais est au moins une réponse par défaut.
+Par exemple, les navigateurs suivants ont une expérience améliorée, à l’execption d’Ajax pour la navigation:
+
+\begin{itemize}
+  \item[\textbullet]
+  BlackBerry 5.0
+  
+  \item[\textbullet]
+  Opera Mini 5.0 à 6.5
+  
+  \item[\textbullet]
+  Nokia Synbian 3
+\end{itemize}
+
+Et quelques autres navigateurs ne peuvent profiter que d’une expérience de base en HTML, non amélioré:
+
+\begin{itemize}
+  \item[\textbullet]
+  BlackBerry 4.x
+  
+  \item[\textbullet]
+  Windows Mobile 6 et plus.
+  
+  \item[\textbullet]
+  Plateformes de smartphone plus anciennes, y compris les téléphones.
+  
+\end{itemize}
+
+\subsection{Principales caractéristiques}
+
+Une liste succincte des principales caractéristiques de jQuery Mobile
+
+\begin{itemize}
+  \item[\textbullet]
+  Construit sur la syntaxe de jQuery afin d’avoir une syntaxe familière, cohérente et une courbe d’apprentissage minimale
+  
+  \item[\textbullet]
+  Compatible avec toutes les principales plateformes de bureau et mobiles: iOS, Android, BlackBerry, Palm WebOS, Nokia/Symbian, Windows Mobile, Opera Mobile/Mini, Firefox Mobile, et tout les navigateurs de bureau récent.
+  
+  \item[\textbullet]
+  Léger (environ 20ko une fois compressé avec toutes les fonctionnalités mobile) et minimale
+  
+  \item[\textbullet]
+  Utilisation du HTML5 conduit à un développement des pages rapides et à un minimum de scripting requis.
+  
+  \item[\textbullet]
+  L’utilisation de l’amélioration progressive apporte un contenu de base et de fonctionnalité à tout mobile, tablette ou navigateur avec une expérience riche.
+  
+  \item[\textbullet]
+  Initialisation automatique des widget jQuery en utilisant des attributs HTML dans le code HTML.
+  
+  \item[\textbullet]
+  Des fonctions d'accessibilité telles que WAI-ARIA sont également inclus afin de s’assurer que les pages puissent travailler avec les lecteurs d’écran (par exemple, VoiceOver dans iOS) et d’autres technologies d’assistance.
+  
+  \item[\textbullet]
+  Prise en charge des événements tactile et de la souris en rationalisant le processus du support tactile.
+  
+\end{itemize}
+
+
+La chose la plus importante à savoir sur jQuery Mobile est qu’il est une bibliothèque d’interface utilisateur, pas un plugin de jQuery. C’est une bibliothèque qui aura des balises HTML en entrée et utilis des styles prédéfnis en les adaptant aux capacités des navigateurs actuel. Ce n’est pas un framework complet comme .NET, Java, ou encore Sencha Touch qui fournissent des services de niveau inférieur, comme la sérialisation, le stockage ou le réseau.
+
+jQuery mobile s’appuie sur JavaScript et les fonctionnalités du HTML5 prises en charge par le navigateur utilisé.
+
+Cette première caractéristique détermine pourquoi le support des navigateurs mobiles de jQuery Mobile est important comparé aux développeurs Java devant déployer leur propre code pour mettre en œuvre des comportements complexe comme le stockage ou d’intérargir avec le matériel exposés par le navigateur de l’hotes (géolocalisation, boussole, etc)
+
+Une autre caractéristique importante de jQuery Mobile est qu’elle n’impose aucune sorte de structure du code JavaScript dans votre application, la principale composante de l’application étant les fichiers HTML qui défnissent la sémantique de l’interface utilisateur, mais pas son look. En général, les développeurs s’appliqueront à utiliser le comportement de jQuery en utilisant sa norme, sa syntaxe comme avec n’importe qu’elle page web ordinaire.

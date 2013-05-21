@@ -1,10 +1,11 @@
-\documentclass[a4paper,10pt]{report}
+\documentclass[a4paper,12pt]{report}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{lmodern} % Pour changer le pack de police
 \usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{geometry}
 
 \title{JavaScript, un langage web?}
 \author{\textsc{BARASCUT} Jérémy}
@@ -14,6 +15,12 @@
 \date{}
 \author{BARASCUT Jérémy}
 \makeindex
+
+\geometry{hmargin=2.0cm,vmargin=2.0cm}
+\renewcommand{\baselinestretch}{1.5}	% Interligne de 1.5
+\setcounter{tocdepth}{3}     % Dans la table des matieres
+\setcounter{secnumdepth}{3}  % Avec un numero.
+
 \begin{document}
  
 \maketitle
@@ -34,19 +41,24 @@ Le résumé (abstract en anglais) de mon article.
 \include{histoire}
 \include{ecmascript}
 \include{ajax}
+\include{jquery}
 \include{restfull}
 \include{mvc}
+\include{cintro}
 
 %client
+\include{introClient}
 \include{ember}
 \include{backbone}
 \include{angular}
+\include{cclient}
 
 
 %embarqué
 \include{smartphone}
 \include{phonegap}
 \include{senchaTouch}
+\include{jqueryMobile}
 
 
 %plateforme
@@ -54,9 +66,9 @@ Le résumé (abstract en anglais) de mon article.
 
 
  
-Bla\index{bla} bla bla
+\index{blabla}
  
-\listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 \printindex
 \end{document}

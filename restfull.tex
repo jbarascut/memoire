@@ -1,16 +1,14 @@
-\chapter{Restfull}
+\section{Restfull}
 \label{ch:restfull}
 
-\section*{Introduction}
+\subsection{Présenation}
 
-En 2000, Roy Fleding, l’un des principaux contributeurs aux protocoles HTTP et URI, a codifié l’architecture du Web dans sa thèse de doctorat intitulée “Architectural Styles and the Design
+En 2000, Roy Fleding, l’un des principaux contributeurs aux protocoles HTTP et URI, a codifié l’architecture du Web dans sa thèse de doctorat intitulée “Architectural Styles and the Design of Network-Based Software Architectures.”
 
-of Network-Based Software Architectures.”
+Dan cette thèse, il a introduit une architecture connu sous le nom "Representational State Transfer (REST)". Ce modèle, en termes abstraits, décrit les fondations du World Wide Web (WWW). Les technologies qui composent ces fondations comprennent le Hypertext Transfer Protocol (HTTP), Uniform Ressource Identifier (URI), les langages de balisages tels que HTML et XML et formats adaptés au Web comme JSON.
 
-Dan cette thèse, il a introduit une architecture connu comme Representational State Transfer (REST). Ce modèles, en termes abstraits, décrit les fondations du World Wide Web. Les technologies qui composent ces fondations comprennent le Hypertext Transfer Protocol (HTTP), Uniform Ressource Identifier (URI), les langages de balisages tels que HTML et XMLer formats adaptés au Web comme JSON.
+REST est un style d’architecture pour les applications en réseau. Il se compose de plusieurs contraintes pour assurer la visibilité, la fiabilité, l'évolutivité etc.
 
-REST est un style d’architecture pour les applications en réseau. Il se compose de plusieurs contraintes pour assurer la visibilité, la fiabilité, l’évolutivité etc.
+Cela rend REST attrayant pour construire des applications client/serveur distribué et décentralisé dans l'infrastructure du Web. Le déploiement de services Web sur cette infrastructure vous permet de profiter d’un large éventail d'infrastructures existantes qui comprennent les serveurs web, les clients, les bibliothèques, les serveurs proxy, les caches, les firewalls, etc.
 
-Cela rend REST attrayant pour construire des applications client/serveur distribué et décentralisé dans l’infrastructure du Web. Le déploiement de services Web sur cette infrastructure vous permet de profiter d’un large éentail d’infrastructures existantes qui comprennent les serveurs web, les clients, les bibliothèques, les serveurs proxy, les caches, les firewalls, etc.
-
-HTTP est un protocole de niveau applications qui définit des opérations de transfert entre les clients et les serveurs. Dans ce protocole, les méthodes telles que GET, POST, PUT et DELETE sont des opérations génériques agissant sur les ressources. Ce protocole élimine le besoin d’inventer des opérations spécifiques à l’application tels que CreateOrder, getStatus, updateStatus, etc.  Les bénéfices que vous pouvez tirer de l'infrastructure HTTP dépénd de comment vous utiliser le protocole HTTP. Cependant, un certain nombre de techniques, y compris SOAP et certains frameworkds web Ajax utilisent HTTP comme protocole pour transporter des messages. 
+HTTP est un protocole de niveau applications qui définit des opérations de transfert entre les clients et les serveurs. Dans ce protocole, les méthodes telles que GET, POST, PUT et DELETE sont des opérations génériques agissant sur les ressources. Ce protocole élimine le besoin d'inventer des opérations spécifiques à l’application tels que CreateOrder, getStatus, updateStatus, etc.  Les bénéfices que vous pouvez tirer de l'infrastructure HTTP dépénd de comment vous utiliser le protocole HTTP. Cependant, un certain nombre de techniques, y compris SOAP et certains frameworks web Ajax utilisent HTTP comme protocole pour transporter des messages. 

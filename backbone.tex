@@ -1,33 +1,33 @@
-\chapter{Backbone.js}
+\section{Backbone.js}
 \label{ch:backbone}
 
-\section*{Introduction}
+\subsection{Introduction}
 
-Backbone.js est un framework JavaScript permettant de structurer une application web non pas comme une suite d’instruction Jquery, mais comme un ensemble de vues autonomes les unes des autres.
+Backbone.js est un framework JavaScript permettant de structurer une application web non pas comme une suite d’instruction jQuery, mais comme un ensemble de vues autonomes les unes des autres.
 
 Backbone est un bon choix pour les applications dites ‘single page application”.
 
-Single page application ( Application Web Monopage) c’est à dire pour simplifier une page principale avec un nombre important d'interactions utilisateur. Plutôt que d’’avoir une navigation par page (le serveur envoie une page à chaque URL), la navigation, l’envoi de formulaire et toutes les actions classiques se gèrent en javascript.
+Single page application ( Application Web Monopage) c’est à dire pour simplifier, une page principale avec un nombre important d'interactions utilisateur. Plutôt que d’’avoir une navigation par page (le serveur envoie une page à chaque URL), la navigation, l’envoi de formulaire et toutes les actions classiques se gèrent en javascript.
 
-Avant, quand on souhaitait faire ce genre de choses, on écrivait son propre Js, sans aucune convention, à grand coup d’AJAX et de script Jquery. On se retrouvais vite avec un code complexe à maintenir et à tester.
+Avant, lorsque l'on souhaitait faire ce genre de choses, on écrivait son propre JavaScript, sans aucune convention, à grand coup d’AJAX et de script Jquery. On se retrouvais vite avec un code complexe à maintenir et à tester.
 
-Backbone.js permet de cadrer cela en définissant modèle, vue et collections afin de structurer notre code. On va pouvoir définir des événements sur des changements de valeurs de nos modèles et ainsi rafraichir automatiquement nos vues.
+Backbone.js permet de cadrer cela en définissant modèle, vue et collections afin de structurer notre code. On va pouvoir définir des événements sur des changements de valeurs de nos modèles et ainsi rafraîchir automatiquement nos vues.
 
 Backbone.js possède son routeur. On peut faire correspondre des actions à des URL.
 
-Il se veut non-contraignant par rapport à ses rivaux, ce qui lui coûte d’être présenté souvent comme moins complet. Son point fort est d’être facilement utilisable avec d’autres libraries ou frameworks.
+Il se veut non-contraignant par rapport à ses rivaux, ce qui lui coûte d’être présenté souvent comme moins complet. Son point fort est d’être facilement utilisable avec d’autres libraires ou frameworks.
 
 Par contre Backbone.js est uniquement une couche client. Il ne gère pas la persistance des données sur un serveur. Heureusement cela se gère très bien en utilisant l’architecture REST. Il suffit d’indiquer à nos modèles une URL et d’utiliser une API JSON Restful pour être capable de réaliser du CRUD très facilement. 
 
 
-\section*{Dépendances}
+\subsection{Dépendances}
 
 
 Backbone.js est basé sur la blirairie Undercore.js. Cette dernière propose des fonctionnalités de manipulation d’objets, de collections et de tableaux assez poussées. Comme toute librairie populaire, elle se veut cross-browser et par héritage, Backbone.js l’est aussi.
 
 Pour tout ce qui est manipulation DOM, plutôt que réinventer la roue, l’équipe en charge de Backbone.JS a décidé de sous traiter cette tâche à jQuery. Il est possible de remplacer jQuery, par exemple avec Zepto, du moment qu’elle respecte l’api jQuery-compatible.
 
-\section*{Composants}
+\subsection{Composants}
 
 
 Backbone.js fournit des composants logiciels pouvant être utilisés librement, que ce soit avec les autres composants Backbone.js ou avec une autre librairie. Les trois plus importants sont le Model, La Vue et la Collection.
@@ -35,29 +35,28 @@ Backbone.js fournit des composants logiciels pouvant être utilisés librement, 
 Les composants Router et Sync fournissent des fonctionnalités très intéressantes.
 
 
-\section*{Les données}
+\subsection{Les données}
 
 
-La classe Backbone.Model est utilisé pour gérer du contenu sous la forme d’un objet JavaScript, en pl’encapsulant et en proposant des méthodes accesseurs.
+La classe Backbone.Model est utilisé pour gérer du contenu sous la forme d’un objet JavaScript, en l’encapsulant et en proposant des méthodes accesseurs.
 
 La classe Backbone.Collection permet de manipuler des collections de Model. On retrouve les méthodes habituelles: push, pop, shift, unshift, add, remove, get, sort ou encore length. On retrouve également les fonctions provenant de Underscore.js
 
 Ces deux classes permettent de manipuler des données. Mais Sync permet de le faire plus simplement.
 
-Sync est le composant permettant de synchroniser les objets à travers une API du type RESTful JSSON. Pour cela, il suffit de lier les objets Model et Collection àune ressource grâce à l’attribut url.
+Sync est le composant permettant de synchroniser les objets à travers une API du type RESTful JSON. Pour cela, il suffit de lier les objets Model et Collection à une ressource grâce à l’attribut url.
 
-\section*{La vue}
+\subsection{La vue}
 
-Toutes les manipulations DOM se font à travers le plugin Jquery qui est de loin, le mieux armé pour ces opérations.
+Toutes les manipulations DOM se font à travers le plugin jQuery qui est de loin, le mieux armé pour ces opérations.
 
-Chaque objet Backbone.View est lié à un noeud DOM (el) et pourra le générer à nouveau, à n’importe quel moment. Le but est alors de découper le document en une multitude de vues que l’on pourra régénérer à souhait et individuellement. 
+Chaque objet Backbone.View est lié à un nœud DOM (el) et pourra le générer à nouveau, à n’importe quel moment. Le but est alors de découper le document en une multitude de vues que l’on pourra régénérer à souhait et individuellement. 
 
-\section*{Asynchronous Module Definition API}
+\subsection{Asynchronous Module Definition API}
 
 Il est possible d’utiliser Backbone.JS avec un AMD Loader comme RequireJS ou Curl. Ni Backbone.JS, ni Underscore ne supportent officiellement AMD. Toutefois, il est possible d’utiliser un fork implémentant de cette API.
 On trouve sur Github des projets templates (boilerplate) qui facilitent la mise en place d’un environnement couplant RequireJS et Backbone. 
 
-\section*{Plugins}
-
+\subsection{Plugins}
 
 Backbone.JS se veut léger : il ne fournit que des composants essentiels. Un des gros manquements de Backbone.JS par rapport à ses concurrents est l’absence de la fonctionnalité de DataBinding. Mais qu’à cela ne tienne, de nombreux plugins sont présents en libre accès sur GitHub, pour implémenter des fonctionnalités. 
