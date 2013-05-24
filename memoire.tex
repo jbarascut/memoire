@@ -5,21 +5,20 @@
 \usepackage{lmodern} % Pour changer le pack de police
 \usepackage{makeidx}
 \usepackage{graphicx}
-\usepackage{geometry}
+\usepackage{geometry} % Pour les marges
 
 \title{JavaScript, un langage web?}
 \author{\textsc{BARASCUT} Jérémy}
-\date{} % Pour mettre la date du jour, tapez \today
- 
-\title{JavaScript, un langage web?}
-\date{}
-\author{BARASCUT Jérémy}
+\date{\today} % Pour mettre la date du jour, tapez \today
+
 \makeindex
 
 \geometry{hmargin=2.0cm,vmargin=2.0cm} %marge de 2cm de chaque coté
 \renewcommand{\baselinestretch}{1.5}	% Interligne de 1.5
 \setcounter{tocdepth}{3}     % Dans la table des matieres
 \setcounter{secnumdepth}{3}  % Avec un numero.
+
+\pagestyle{plain}
 
 \begin{document}
  
@@ -51,6 +50,7 @@ Le résumé (abstract en anglais) de mon article.
 \include{ember}
 \include{backbone}
 \include{angular}
+\include{canjs}
 \include{cclient}
 
 
