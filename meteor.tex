@@ -1,0 +1,35 @@
+\section{Meteor.js}
+\label{ch:meteor}
+
+\subsection{Présentation}
+
+Bien que peu connu, Meteor est un environnement très simple qui permet de développer des applications modernes en quelques heures, alors que ça prendrait plusieurs semaines avec de très bons outils. 
+En effet, les applications développées avec Meteor s’éxécutent directement dans le navigateur plutôt que sur un serveur web et récupèrent toutes les données nécessaires dans le cloud.
+Meteor est un framework open source qui mise beaucoup sur le JavaScript. Avec quelques lignes de JavaScript et quelques commandes, il est possible de développer une application Web relativement simple qui s’actualise en temps réel.
+Un tel modèle est déjà utilisé par des grandes entreprises telles que Twitter, Facebook et Google mais était jusqu’alors hors de portée pour un développeur moyen. Avec cette levée de fonds conséquente (11,2 millions de dollars), le projet espère devenir plus accessible aussi bien aux débutants qu’aux experts et devenir, pourquoi pas, un standard.
+
+En attendant, Meteor est toujours en cours de développement mais se développe rapidement et des changements majeurs sont au rendez-vous dans l’API à chaque nouvelle version. Ce n’est pas encore une version stable, il faudra pour cela patienter sans doute plusieurs mois. Mais je trouve interessant de le présenter dans ce mémoire.
+
+\subsection{Principes}
+
+Meteor permet de développer avec le même langage (en Javascript ou dans un langage compilant vers Javascript comme CoffeeScript ou Dart) et avec la même API sur le client et sur le serveur. Ce choix d’architecture permet de déplacer facilement un traitement du serveur vers le client (et réciproquement) voire de le dupliquer par exemple dans le cas de la validation d'un formulaire.
+Dans cette logique, Meteor inclut un système de gestion de base de données côté client, fonctionnalité originale du framework. Il est ainsi possible d'effectuer des requêtes même en étant déconnecté du serveur. Cela permet notamment à Meteor d'inclure par défaut, des mécanismes de compensation de latence. Par exemple l'envoi d'un message dans un chat sera instantanément ajouté au fil des messages au clic sur le bouton "Envoyer", tandis que la vérification du message se fera en arrière plan côté serveur. Ce mécanisme permet l'utilisation de la programmation réactive coté client.
+
+\subsection{Live HTML}
+
+Si des modifications sont apportez au code HTML, CSS, JavaScript, ou à des données sur le serveur, chaque client montre les changements automatiquement sans actualisation du navigateur. Par exemple, si le développeur change la couleur de fond d'une page en jaune alors chaque navigateur affichera la nouvelle couleur de fond jaune sans aucun rafraîchissement. Ou, si un utilisateur ajoute un nouveau film à une collection de films, alors tous les navigateurs afficheront le nouveau film automatiquement.
+Avec Live HTML, les utilisateurs n'ont plus besoin d'un bouton d'actualisation. Les modifications apportées à une application se produisent partout automatiquement sans aucun effort. Le framework Meteor gère tous les détails nativement afin de garder tous les clients  synchroniser avec le serveur simplement et sans aucun développement spécifique.
+
+\subsection{Compensation de la latence}
+Lorsque que quelqu'un réalise une modification des données sur le client, ces modifications apparaissent comme si elles se sont produites sur le serveur, sans aucun retard. Par exemple, si un utilisateur cré un nouveau film, le film apparaît instantanément. Cependant, ce n'est qu'une illusion. Dans le fond, les mises à jour de meteor actualise la base de données avec le nouveau film. Si, pour une raison quelconque, le film ne peut pas être ajouté à la base de données, Meteor enlève le film dans le client automatiquement.
+La compensation de la latence est extrêmement importante pour la création d'une application Web sensible. Lorsque l'on veut que l'utilisateur soit en mesure d'apporter des modifications instantanées dans le navigateur, le framework va gérer les détails de la mise à jour de la base de données sans ralentir l'utilisateur.
+
+\subsection{Temps réel}
+
+
+Plutot que d’envoyer du html a votre client, Meteor propose d’envoyer seulement les données et de laisser le client décider de la façon dont elles doivent être affichées. La où Meteor est intéressant, c’est pour sa gestion native du temps réel. L’objet affiché dans votre navigateur a été modifié par un autre utilisateur ? Pas de problème, Meteor va informer tout les clients de cette modification, et affiche la modification en conséquence. Meteor a fait le choix d’utiliser SockJS. A la différence de socket.io, SockJS ne passe pas par les websockets, mais par les requêtes xhr par soucis de compatibilité avec tous les navigateurs. Tout se passe par un système de push/subscribe que l’on retrouve de plus en plus. L’intéret du push/subscribe est que les clients s’abonnent à des événement qui les intéressent et réagissent en conséquences.
+
+\subsection{Rafraichissement automatique}
+
+Lorsqu'un développeur est en train de développer, la sauvegarder d’un fichier sur son ordinateur va automatiquement rafraichir le navigateur avec ses modifications. Ce principe de modification à chaud est aussi disponible en production : Meteor annonce qu’une nouvelle version d'une application peut être déployée de façon transparente à ses utilisateurs.
+
