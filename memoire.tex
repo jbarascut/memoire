@@ -6,6 +6,8 @@
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{geometry} % Pour les marges
+\usepackage[table]{xcolor} % Pour mettre de la couleur dans les tableaux
+
 
 \title{JavaScript, un langage web?}
 \author{\textsc{BARASCUT} Jérémy}
@@ -15,8 +17,8 @@
 
 \geometry{hmargin=2.0cm,vmargin=2.0cm} %marge de 2cm de chaque coté
 \renewcommand{\baselinestretch}{1.5}	% Interligne de 1.5
-\setcounter{tocdepth}{3}     % Dans la table des matieres
-\setcounter{secnumdepth}{3}  % Avec un numero.
+\setcounter{tocdepth}{2}     % Dans la table des matieres
+\setcounter{secnumdepth}{2}  % Avec un numero.
 
 \pagestyle{plain}
 
@@ -39,6 +41,7 @@ Le résumé (abstract en anglais) de mon article.
 \include{introduction}
 \include{histoire}
 \include{ecmascript}
+\include{json}
 \include{ajax}
 \include{jquery}
 \include{restfull}

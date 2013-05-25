@@ -1,4 +1,342 @@
 \section{Conclusion}
 \label{ch:conclusion client}
 
-\subsection{Conclusion}
+Au vue de la présentation des différents framework client, il peut être extrêmement difficile de choisir un framework MVC JavaScript pour développer notre client web. Il y’a tellement de facteurs à considérer et tellement d’options à étudier que la sélection d’un framework peut être hardu. Pour avoir une idée de toutes les alternatives possibles il y’a le site TodoMVC qui permet de comparer l’utilisation de plusieurs framework codé afin de réaliser une liste de choses à faire (TODO)
+
+Je vous ai présenter 4 frameworks: Angulare, BackBone, CanJS et Ember. J’ai donc décidé de réaliser une comparaison pour ce mémoire pour aider à la décision du framework à utiliser. Je vais passer par plusieurs facteurs que vous pourriez envisager pour en choisir un.
+
+Pour chaque facteur, j’ai attribué une note comprise entre 1 et 5. Où 1 est pauvre et 5 est riche. J’ai essayé d’être impartial dans mon mémoire, mais bien sûr mon objectivité est fortement compromise parce que mes sources sont uniquement basé sur les exemples du site TodoMVC.
+
+%Inclure logo image framework
+
+\subsection{Fonctionnalités}
+
+Il y’a des éléments vraiment important qu’un framework doit fournir pour avoir les bases nécéssaire à la réalisation d’une application utiles. Fait elle une liaison entre le modèle et la vue? une liaison bidirectionnelle entre le modèle et la vue? l’utilisation de filtres? les propriétés sont être calculé? Y’a t’il une validation des formulaires? etc. Cela peut être une très longue liste. Voici une comparaison de ce que je considère comme des caractéristiques vraiment importantes dans un framework MVC.
+
+
+\begin{tabular}{|l|c|c|c|c|}
+  \hline 
+  Fonctionnalités & Angular & Backbone & CanJS & Ember \\
+  \hline 
+  Observables & O & O & O & O \\
+  \hline 
+  Routage & O & O & O & O \\
+  \hline 
+  Liaison modèle-vue & O & - & O & O \\
+  \hline 
+  Liaison modèle-vue bidirectionnelle & O & - & - & O \\
+  \hline 
+  Vue partielle & O & - & O & O \\
+  \hline 
+  Vue filtrée & O & - & O & O \\
+  \hline
+\end{tabular}
+
+\textbf{Observables:} Objets qui peuvent être observés lors des changements.
+
+\textbf{Routage:}Ecoute les changements d’URL du navigateur et permet d’agir en conséquence.
+
+\textbf{Liaison modèle-vue:}Utilisation d’objets observables dans les vues, les vues ayant un rafraîchissement automatique lorsque le changement de l’objet est observable.
+
+\textbf{Liaison bidirectionnelle entre le modèle et la vue:}Permet à la vue de pousser la modification de l’objet observation automatiquement, par exemple, un formulaire de saisie.
+
+\textbf{Vue partielle:} Vues qui comprennent d’autres vue
+
+\textbf{Vue filtrée:} Avec des vues qui affichent des objets filtrés par un cetain nombre de critères.
+
+\subsubsection{Résultat}
+
+Sur la base de ces caractéristiques les scores sont les suivants: 
+
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  5 & 2 & 4 & 5 \\
+  \hline
+\end{tabular}
+
+Il est important de noter que Backbone peut faire la plupart de ces choses avec beaucoup d’écriture de code manuel ou à l’aide de plug-in. Mais je n’ai considéré que les fonctions disponibles de base dans les framework.
+
+\subsection{Flexibilité}
+
+Il existe des centaines de plugin et bibliothèques qui font des choses spécilalisés. Ils le font habituellement mieux que ce qui vient du framework. Il est donc important d’être en mesure de pouvoir intégrer ces bibliothèques dans le framework MVC choisi.
+
+\textbf{Backbone} est le framework le plus souple, car il est celui qui à le moins de convention et de normes. Vous êtes obligé de prendre beaucoup de décision lors du développement.
+
+\textbf{CanJS} est presque aussi souple que Backbone car il permet d’intégrer facilement d’autres bibliothèques avec un minimum d’effort. Avec CanJS il est possible également d’utiliser un moteur de rendu totalement différent. Par exemple l’utilisation du moteur de rendu "Rivets" ne pose aucun problème. Mais il est vivement recommandé d’utiliser le moteur de rendu du framework.
+
+\textbf{Ember} et \textbf{Angular} sont aussi des framework souple dans une certaine mesure, mais il se peut que l’utilisation d’autres biliothèques soit difficile à mettre en place en complément du framework.
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  3 & 5 & 4 & 3 \\
+  \hline
+\end{tabular}
+
+
+\subsection{La documentation et la courbe d'apprentissage}
+
+\subsubsection{Angular}
+
+Angular est un framework qui lorsqu’on le découvre procure un effet “wow”. Il peut faire des choses étonnantes, comme la liaison bidirectionnelles, sans avoir à apprendre beaucoup de choses. Il semble assez facile à première vue. Mais une fois les bases appris, la courbe d’apprentissage devient à partir de là abrupte. Il s’agit d’un framework complexe avec beaucoup de particularités. La lecture de la documentation n’est pas facile car il y’a beaucoup de jardon spécifique à Angular et un manque important d’exemple.
+
+\subsubsection{Backbone}
+
+Les bases de Backbone sont assez facile à apprendre. Mais une fois appris, l’on se rend compte que la documentation ne donne pas assez de conseil sur la façon de structurer son code. Il est alors obligatoire de regarder ou lire des tutoriels pour apprendre certaines des meilleures pratiques de backbone. Il se peut également que l’apprentissage d’une autre bibliothèque soit obligatoire pour faire avancer votre développement (par exemple Marionette ou Thorax). Au final, l’apprentissage de Backbone n’est pas plus facile.
+
+\subsubsection{CanJS} 
+
+CanJS en comparaison est le plus facile à apprendre. Juste en lisant le site internet du framework (http://canjs.us), l’essentiel de ce que l’on a besoin de savoir est présenté pour être productif. Il y’a bien sûr encore beaucoup à apprendre, mais la nécessité de recourir à l’aide survint à de rares occasions (tutoriels, forum, irc).
+
+\subsubsection{Ember}
+
+Ember a aussi une courbe d’aprentissage abrupte comme Angular, mais l’apprentissage de Ember est un peut plus facile que Angular. Il nécessite par contre un investissement important au début pour acquérir les bases. Angular en revanche permet de faire des choses incroyables sans en avoir trop à apprendre. Ember manque de cet effet “wow”
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  2 & 4 & 5 & 3 \\
+  \hline
+\end{tabular}
+
+
+\subsection{La productivité des développeurs}
+
+Après avoirr appris correctement le framework ce qui importe le plus est de savoir comment le framework permet d’avoir une productivité performante en mixant conventions, magie et conception la plus rapide possible.
+
+\subsubsection{Angular}
+
+Une fois que l’on maîtrise Angular correctement, l’on devient très productif. Il n'y a aucun doute à ce sujet. Il n’a cependant pas le score le plus élevé parce que Ember franchi une étape supplémentaire dans cette catégorie.
+
+
+\subsubsection{Backbone}
+
+
+Backbone oblige à écrire beaucoup de code réutilisable, ce qui est pour certains projet totalement inutile. C’est un avis de certain développeur qui pense que c’est une contrainte importante allant à l’encontre de la productivité des développeurs.
+
+\subsubsection{CanJS}
+
+CanJS ne brille pas mais ne déçoit pas non plus dans ce domaine. En raison de la faible courbe d’apprentissage vous pouvez être très productif avec lui très tôt.
+
+
+\subsubsection{Ember}
+
+Ember brille particulièrement ici. Parce qu’il est plein de conventions, il fait beaucoup de choses à votre place. Tout ce qu’il reste à faire est d’apprendre et appliquer les conventions et Ember s’occupe du reste.
+
+
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  4 & 2 & 4 & 5 \\
+  \hline
+\end{tabular}
+
+\subsection{Communauté}
+
+Est-il facile de trouver de l’aide, des tutoriels et des experts?
+
+La communauté \textbf{Backbone} est énorme, il n’y a aucun doute à ce sujet. L’on trouve des dizaines de tutoriaux sur Backbone et une communauté très active sur StackOverflow et IRC.
+
+Les communautés \textbf{Angular} et \textbf{Ember} sont assez grandes aussi. Il y’a également beaucoup de tutoriel et d’activité sur StackOverflow et IRC, mais pas autant que sur Backbone.
+
+La communauté \textbf{CanJS} est assez faible en comparaison, mais heureusement, très active et utile. La taille de la communauté n’est par conséquent pas un frein important.
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  4 & 5 & 3 & 4 \\
+  \hline
+\end{tabular}
+
+\subsection{Ecosystème}
+
+Y’a t’il un écosystème de plugin et de bibliothèques?
+
+Là encore \textbf{Backbone} surpasse les autres. Il y’a des tonnes de plugin disponible. L’écosystème d’\textbf{Angular} devient assez interessant avec des choses comme l’interface utilisateur. L’écosystème d’\textbf{Ember} est moins développé mais il devrait s’améliorer en raison de sa popularité importante.\textbf{CanJS} en comparaison à le plus petit écosystème.
+
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  4 & 5 & 2 & 4 \\
+  \hline
+\end{tabular}
+
+\subsection{Poid}
+
+Cela peut être un facteur important, surtout pour du développement mobile.
+
+\subsubsection{Poid des frameworks seul (sans aucune dépendances)}
+
+
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  80ko & 61ko & 57ko & 269ko \\
+  \hline
+\end{tabular}
+
+Backbone est le plus léger et les développeurs soulignent souvent ce fait. Mais ce n’est pas le cas si l’on compte les dépendances.
+
+\subsubsection{Poids des frameworks avec dépendances}
+
+\textbf{Angular} est le seul framework du groupe qui ne nécessite pas de bibliothèques supplémentaires pour travailler.
+
+Tout les autres ont besoins de dépendances pour fonctionner.
+
+\textbf{Backbone} a au moins besoin de Underscore et Zepto. Il est possible d’utiliser les mini-templates de Underscore pour le rendu des vues, mais la plupart du temps, l’utilisation d’un véritable moteur de template est appréciable comme Moustache par exemple. Au final le poids est de 61ko.
+
+\textbf{CanJS} a besoin d’au moins Zepto. 57ko.
+
+\textbf{Ember} a besoin de jQuery et de Handlebars. 269ko.
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  4 & 5 & 5 & 2 \\
+  \hline
+\end{tabular}
+
+
+\subsection{Performance}
+
+La performance n’est pas forcément un facteur déterminant dans le choix d’un framework car ils sont tous assez performant pour la plupart des cas d’utilisation. Mais cela dépend bien sur de l’utilisation du framework. Si il est utilisé pour la création d’un jeu alors les performances deviennent importantes.
+
+Il y’a sur internet de nombreux tests de performance avec ces frameworks. Par contre la fiabilité des tests ne sont pas une valeur sure car il est impossible de vérifier si ces tests ont été réalisé de dans bonne condition, ni avec un code de qualité.
+
+Cependant, au vu des tests, il semblerait que \textbf{CanJS} ait un avantage quand il s’agit de performance, spécialement dans l’affichage de la vue. D’autre part, \textbf{Angular} est le moins performant.
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  3 & 4 & 5 & 4 \\
+  \hline
+\end{tabular}
+
+
+\subsection{Maturité}
+
+Est-ce un framework mature, est-ce prouvé en production, est-ce que de nombreux application web l’utilise?
+
+\textbf{Backbone} a une tonne de sites construit avec lui. Sa base de code n’a pas eu de grands changements dans les deux dernières années ce qui est une bonne chose du point de vue de la maturité.
+
+Bien que \textbf{Ember} n’est pas nouveau, il a eu de profond changements en cours de route, transformant tout pour attendre une forme stable dans les trois derniers mois. Par conséquent il ne s’agit pas d’un framework mature.
+
+\textbf{Angular} semble plus stable et éprouvé que Ember. Mais pas autant que Backbone.
+
+\textbf{CanJS} est une extraction de JavaScriptMVC, une bibliothèque qui a été lancé en 2008 et possède un important retour d’expériences et d’application construite avec.
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  4 & 5 & 4 & 3 \\
+  \hline
+\end{tabular}
+
+
+
+\subsection{Sécurité des fuites mémoire}
+
+Il s’agit d’une considération importante si l’on construit des applications en single page, qui sont destinés à rester ouvert pendant de longue période. Si l’on ne veut pas que l’application est une fuite mémoire, cela peut être un réel problème. Malheureusement les fuites peuvent se faire assez facilement, surtout si l’on crée soit même des écoutes pour les évènements DOM.
+
+\textbf{Angular}, \textbf{CanJS} et \textbf{Ember} traiteront de façon efficace et aussi longtemps les fuites mémoire du moment que l’on suit les meilleures pratiques. \textbf{Backbone} en revanche oblige à faire ce travail manuellement dans une méthode de désallocation mémoire.
+
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  5 & 3 & 5 & 5 \\
+  \hline
+\end{tabular}
+
+
+\subsection{Testabilité}
+
+Est-il facile de tester le code?
+
+Les clés pour avoir un grand code testable sont la modularité (avoir de petits morceaux qui peuvent être testés séparément) et l’injection de dépendance (être capable de changer les dépendances dans les tests).
+
+Il est possible de le faire avec la plupart des framewoks du moment que l’on utilise les bons modèles, mais ce n’est pas facile et ils obligent le changement des habitudes d’applications.
+
+La modularité et l’injection de dépendance sont des caractéristiques fortes de \textbf{Angular}, en décourageant activement de faire les choses d’une autre manière que Angular l'a prévu. Cela conduit généralement à un code plus facile à tester. Pour cette raison, Angular à un avantage dans ce domaine.
+
+
+\subsubsection{Résultat}
+\begin{tabular}{|c|c|c|c|}
+  \hline 
+  Angular & Backbone & CanJS & Ember \\
+  \hline 
+  5 & 4 & 4 & 4 \\
+  \hline
+\end{tabular}
+
+
+\subsection{Goût personnel}
+
+C’est probablement l’un des facteurs les plus importants lors du choix d’un framework.
+Mais il n’est pas possible de noter ce sujet et reste à l’entière appréciation du développeur.
+
+\subsection{Total}
+
+En rassemblant les résultats on arrive à un palmarès. Ceci n’est qu’une opinion forgé sur TodoMVC et de lecture de sites internet. Il ne représente pas un résultat fiable et sert juste à dégager un point de vue.
+
+
+\begin{tabular}{|l|c|c|c|c|}
+  \hline 
+  Total général & Angular & Backbone & CanJS & Ember \\
+  \hline 
+  Fonctionnalités & 5 & 2 & 4 & 4 \\
+  \hline 
+  Flexibilité & 3 & 5 & 4 & 3 \\
+  \hline 
+  La documentation et la courbe d'apprentissage & 2 & 4 & 5 & 3 \\
+  \hline 
+  La productivité des développeurs & 4 & 2 & 4 & 5 \\
+  \hline 
+  Communauté & 4 & 5 & 3 & 4 \\
+  \hline 
+  Écosystème & 4 & 5 & 2 & 4 \\
+  \hline
+  Poid & 4 & 5 & 5 & 2 \\
+  \hline
+  Performance & 3 & 4 & 5 & 4 \\
+  \hline
+  Maturité & 4 & 5 & 4 & 3 \\
+  \hline
+  Sécurité des fuites mémoire & 5 & 3 & 5 & 5 \\
+  \hline
+  Testabilité & 5 & 4 & 4 & 4 \\
+  \hline
+  Total & 43 & 44 & 45 & 42 \\
+  \hline
+\end{tabular}
+
+Si le développeur accorde autant de poid à chaque facteur, il s’agit d’un concours serré, ll n’y a ni gagnants ni perdants. Donc je suppose que tout revient au goût personnel du développeur ou à l’affection de poids différents pour chaque catégories.
