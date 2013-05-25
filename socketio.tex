@@ -1,0 +1,18 @@
+\section{Socket.IO}
+\label{ch:socketio}
+
+\subsection{Présentation}
+
+Socket.IO est un module Node puissant qui apporte la possibilité de gérer simplement les connexions entre le serveur et le client.
+
+D’après les dire du créateur de Socket.IO, “l’objectif est de fournir pour les applications basées sur les navigateurs, un mécanisme de communication bidirectionnelle entre des serveurs et/ou des clients". 
+\textbf{Websocket} est un protocole bidirectionnel moderne qui permet une communication interactive  entre le navigateur et le serveur. Son principal inconvénient est que la mise en œuvre est généralement disponible uniquement sur les navigateurs les plus récents.
+Cependant en utilisant Socket.IO, ce détail de bas niveau n’est pas un problème pour le développeur qui est soulagé par Socket.IO de la nécessité d’écrire du code spéficifique en fonction du navigateur.
+
+Le côté client utilisera automatiquement et de manière transparente le meilleur type de communication (basé sur les fonctionnalités du navigateur) pour se connecter à un serveur Node.
+
+
+Prenons un exemple
+Si l’architecture de l’application utilise un client Google Chrome, le navigateur est capable d’utiliser le  protocole WebSocket et par conséquent Node choisira ce type de connexion.
+
+Mais que se passerait il si l’on décide de créer une connexion avec le navigateur de Mozilla Firefox où le support des WebSocket est désactiver? Socket.IO choisira d’utiliser alors le mode de connexion en “long pooling”  automatiquement et ce sans besoin de changer quoi que ce soit dans le code du client et du serveur.
