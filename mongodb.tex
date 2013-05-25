@@ -1,0 +1,79 @@
+\chapter{Base de données}
+
+\section{MongoDB}
+\label{ch:mongodb}
+
+\subsection{Présentation}
+
+MongoDB se présente comme une solution évolutive, de haute performance et open source. C’est un type particulier de base de données NoSQL, plus précisément c’est un système de base de données orientée document. MongoDB est écrit en C++.
+
+Pour bien comprendre le concept de base de données orientée document, il faut acquérir une certaine terminologie de base sur MongoDB. 
+
+L’écosystème de Node.js possède un excellent support de nombreuses bases de données relationnelles et populaires tels que PostgreSQL et MySQL. Les bases de données relationnelles sont solides et éprouvées depuis le temps et serait répondre adéquatement aux besoins de nombreuses applications web modernes.
+
+Alors pourquoi utiliser MongoDB? 
+ 
+MongoDB est choisit en réponse à notre problématique par un ensemble de fonctionnalités caractérisant cette base de données. 
+
+\subsection{Schéma libre}
+
+Un schéma libre signifie qu'il n'y a pas de structure prédéfinie. Une façon simple d’envisager MongoDB est de prendre l’exemple d’un tableau géant d’objets JSON qui est rapide et puissante dans l’insertion de données et dans les capacités de recherche.
+
+Parce que toutes les informations de la même entité peuvent être stocké de façon dynamique au sein d’un seul document, rejoindre les opérations n’est plus nécessaire dans ce type de base de données.
+
+Une base de données orientée document est une base de données où chaque document dans une même collection peut avoir une structure tout à fait différente. Avec cette orientation, un certain nombre de champs peut importe la longueur peut être ajouté à un document, même après sa création.
+
+Une opération sur des jointures coûte très cher, ils exigent une cohérence forte et un schéma fixe. Les éviter en résulte une grande capacité de réduction des coûts et une augmentation des performances. 
+
+\subsection{MongoDB vs SGBDR}
+
+Pour un puriste de la base de données relationnelle, la notion de schéma de base libre peut paraître extraterrestre. Cependant il y’a certains cas d’utillisation où MongoDB  offre des avantages sur son homologues traditionnelle. 
+
+Tout d’abord il est bien adapté pour le développement itératif. Par exemple, imaginons que nous avons une table de personne et nous souhaitons ajouter une liste de film préférés. Dans une base relationnel, cela nécessiterait une table de film supplémentaire et une table de jonction pour stocker les relatons. En MongoDB cela pourrait se faire en ajoutant simplement une série de films dans la table personne en fonction des besoins. Pour une entreprise en démarrage à l’évolution rapide des besoins et des équipes d'ingénieurs à temps plein, l’agilité de MongoDB joue un rôle important.
+MongoDB est également approprié pour les données non structurées. Dans le monde de la finance avec des milliers de type de données différentes, utiliser une base de données relationnel poserait un certain nombre de défis mais en utilisant MongoDB c’est aussi simple que représenter les données en JSON et les insérer dans la base de données.
+En outre MongoDB a été conçu dès le départ pour le big data, qui est soutenu par un mécanisme connu sous le nom de fragmentation permettant accélérer la recherche.
+
+D’autre cas d’utilisation de MongoDB sont discutés en détail sur le site officiel.
+
+\subsection{JavaScript}
+
+Les demandes faites à MongoDB sont écrites en JavaScript et est un ajustement parfait pour une application 100\% JavaScript. En outre, ces demandes utilisent une requête de style SGBDR qui réduit l’écart pour les développeurs habitués à un langage traditionnelle de requête structuré.
+
+\subsection{Types de données}
+
+MongoDB utilise BSON pour le stockage des données et comme format de transmission réseau. BSON signifie “Binary JSON” et est une sérialisation binaire codé en JSON-like.
+Selon le bsonspec.org, il a été conçu pour être léger, traversable et efficace.
+
+Son principal avantage sur XML et JSON est l’efficacité en terme d’espace et de temps de traitement.
+
+Les documents BSON peuvent être utilisés pour stocker plusieurs types de données comme “string, integer, boolean, double, null, array, objet, date, données binaires, expression régulière et code source".
+
+\subsection{JSON Document-Oriented}
+
+MongoDB utilise le format JSON parsé comme structure de données. Les données envoyés à MongoDB peuvent être stockées immédiatement et sans aucun prétraitement. L’approche clé/valeur d’autres bases de données NoSQL comme Redis n’est pas convenable en cas de stockage de valeur plus important qu’une seule valeur.
+
+\subsection{Temps-réel}
+
+MongoDB est très bon pour insérer en temps réels des données et garder un support de transaction extrêmement simple
+Il est rapidement devenu la base de données de facto pour Node.js. Jason Hoffman, fondateur de Joyent, a donné une présentation sur Node.js et MongoDB comme étant LA pile moderne pour le Web temps  réel en remplacement de la couche LAMP traditionnelle (Linux, Apache, MySQL, PHP).
+
+\subsection{Fonctionnalités avancées}
+
+MongoDB possède un ensemble de fonctionnalités avancées telles que l’index complet, la réplication, la fragmentation et le map/reduce.
+
+\subsection{Connecteur NodeJS}
+
+MongoDB a un pilote source natif et ouvert écrit par Christian Amor Kvalheim appelé node-mongodb-native.
+https://github.com/christkv/node-mongodb-native
+
+\subsection{Conclusion}
+
+MongoDB et plus généralement le mouvement NoSQL, fait regarder différemment l’utilisation des bases de données. MongoDB en replacement du SQL par JavaScript peut être un facteur inquiétant à première vue, mais il est rapidement facile à apprendre et très flexible.
+
+Un grand merci à son interpréteur JavaScript qui permet de commencer à pratiquer MongoDB très rapidement.  En fait, vous pouvez même commencer sans l’installer en utilisant le site try.mongodb.org qui propose un tutoriel interactif pour apprendre MongoDB.
+
+Comme le nombre important et croissant de pilotes est disponibles (Java, Scala, C\#, Erlang, C, C++, etc), MongoDB évolue rapidement et à été mis en open source en 2009 par 10gen l’éditeur.
+
+
+
+
