@@ -19,12 +19,16 @@
 \renewcommand{\baselinestretch}{1.5}	% Interligne de 1.5
 \setcounter{tocdepth}{2}     % Dans la table des matieres
 \setcounter{secnumdepth}{2}  % Avec un numero.
-
+\setlength{\parindent}{0cm} % Défini la largeur de l'alinéa de 1cm.
 \pagestyle{plain}
 
 \begin{document}
  
 \maketitle
+
+\begin{abstract}
+Le résune en français de mon article.
+\end{abstract}
  
 \begin{abstract}
 Le résumé (abstract en anglais) de mon article.
@@ -59,6 +63,7 @@ Le résumé (abstract en anglais) de mon article.
 
 %serveur
 \include{introServeur}
+\include{nodejs}
 \include{npm}
 \include{socketio}
 \include{meteor}
@@ -79,6 +84,8 @@ Le résumé (abstract en anglais) de mon article.
 
 %futur
 \include{ecma6}
+
+%conclusion
  
 \index{blabla}
  
