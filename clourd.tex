@@ -1,0 +1,59 @@
+\chapter{Client lourd}
+
+\section{Windows 8}
+\label{ch:windows8}
+
+\subsection{Présentation}
+
+Avec l'arrivée des nouveaux matériels - smartphones, tablettes… - le type d'interface que proposait Microsoft avec Windows depuis de nombreuses années ne remplissait plus totalement sa fonction. Difficile d'utiliser un clic droit générant un petit menu avec les doigts directement sur une surface tactile. Il fallait donc faire évoluer l'interface, ce qui entraînait forcément un changement d'habitudes et d'utilisations.
+Microsoft a donc pris le pari de lancer une nouvelle version de son système d'exploitation, Windows 8, avec une nouvelle interface, un nouveau concept, et pleins de nouvelles fonctionnalités. Ainsi est apparu Metro.
+
+Pour cette nouvelle version, Microsoft a mis au point une nouvelle API pour pouvoir utiliser son noyau : Windows RunTime. Elle garde en plus toutes les meilleures fonctionnalités du .NET en les améliorant. Elle n'est cependant accessible que par les langages suivants : C++, C\#, VB.Net et JavaScript
+
+Microsoft cherche à rassembler un maximum de développeurs de tous horizons et à se moderniser avec les derniers standards. C'est pourquoi il a été intégré au noyau de Windows 8 la possibilité de développer en HTML5 et JavaScript. Il est désormais aussi facile de créer une application qu'un site web ! Les développeurs peuvent donc intégrer rapidement et sans trop de modification leurs applications existantes pour client léger et smartphones. Le fait que Windows 8 supporte JavaScript en natif permet l'intégration de l'ensemble de l'écosystème JavaScript et donc une superble plateforme de développement.
+
+\section{Gnome3}
+\label{ch:gnome3}
+
+\subsection{Présentation}
+
+Le souci de plaire aux développeurs n'est pas nouveau au sein du projet GNOME. Dès son origine, le développeur doit pouvoir écrire une application GNOME dans le langage de son choix. Ce fut un des objectifs de GObject puis de GObject introspection, un des fondements de la plateforme GNOME.
+
+Aujourd'hui les bases techniques sont là mais l'équipe est à la recherche d'une approche globale pour multiplier les applications GNOME. L'idée est donc de fournir une solution officielle et unifiée aux problématiques du développement d'application, sans exclusive.
+
+Une décision importante a été prise par les membres de Gnome : le choix du langage par défaut pour le développement d'application GNOME. Attention, il ne s'agit pas de réécrire les programmes existants dans un nouveau langage. Actuellement, le C est utilisé pour documenter la plateforme, car c'est la langue native des bibliothèques. Il faut présenter un langage de haut niveau pour le développement d'applications.
+
+La majorités des applications sont écrites dans un langage de plus haut niveau : python, vala, javascript, perl, C\#, etc. Peu sont écrites en C ou en C++.
+
+Les membres de l'équipe Gnome ont décider d'harmoniser le développement en mettant en avant un seul langage pour le développement d'application Gnome.
+
+Mettre en avant un langage n'est pas rejeter les autres, au contraire. Le but est justement que l'utilisation première des bibliothèques de la plateforme se fasse à travers des passerelles. Hors GObject Introspection est utilisé pour tout les langages. C'est donc un gain pour tous les langages de haut niveau que d'en avoir un mis en avant.
+
+C'est finalement Javascript qui a obtenu le plus large consensus. En voici quelques raisons :
+
+\begin{list}{•}{}
+ 
+  \item
+  Les développements récents en font un langage rapide et indépendant de la plateforme.
+
+  \item
+  Très répandu, de plus en plus en dehors du web avec Windows 8.
+
+  \item
+  Déjà fait ses preuves avec GNOME Shell et GNOME Document.
+
+
+\end{list}
+
+Concrètement, les nouvelles applications GNOME seront en javascript, à l'instar de GNOME Document. Les autres ne devraient pas migrer sauf avis du mainteneur. Ainsi GNOME Contact restera en Vala.
+
+
+\section{Conclusion}
+Windows 8 et le prochain Gnome permettent d'écrire des applications native en JavaScript et ainsi de réutiliser du code afin de développer une fois sans beaucoup de modification entre les plateformes.
+Je n'en ai pas parlé afin de ne pas alourdir cette partie, mais QT, le célèbre framework C++ libre multiplateforme orienté création d'interface graphique pour client lourd, permet l'utilisation de JavaScript au travers de QML.   
+L'équipe de Gnome et de Microsoft misent sur JavaScript pour le développement des futurs applications de Gnome. 
+Ainsi JavaScript n'a plus un usage uniquement web et commence à être utilisé en dehors d'un navigateur
+
+
+
+

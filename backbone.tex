@@ -7,17 +7,17 @@ Backbone.js est un framework JavaScript permettant de structurer une application
 
 Backbone est un bon choix pour les applications dites ‘single page application”.
 
-Single page application ( Application Web Monopage) c’est à dire pour simplifier, une page principale avec un nombre important d'interactions utilisateur. Plutôt que d’’avoir une navigation par page (le serveur envoie une page à chaque URL), la navigation, l’envoi de formulaire et toutes les actions classiques se gèrent en javascript.
+Single page application ( Application Web Monopage) c’est à dire pour simplifier, une page principale avec un nombre important d'interactions utilisateur. Plutôt que d’avoir une navigation par page (le serveur envoie une page à chaque URL), la navigation, l’envoi de formulaire et toutes les actions classiques se gèrent en javascript.
 
 Avant, lorsque l'on souhaitait faire ce genre de choses, on écrivait son propre JavaScript, sans aucune convention, à grand coup d’AJAX et de script Jquery. On se retrouvais vite avec un code complexe à maintenir et à tester.
 
 Backbone.js permet de cadrer cela en définissant modèle, vue et collections afin de structurer notre code. On va pouvoir définir des événements sur des changements de valeurs de nos modèles et ainsi rafraîchir automatiquement nos vues.
 
-Backbone.js possède son routeur. On peut faire correspondre des actions à des URL.
+Backbone.js possède son propre routeur. On peut faire correspondre des actions à des URL.
 
 Il se veut non-contraignant par rapport à ses rivaux, ce qui lui coûte d’être présenté souvent comme moins complet. Son point fort est d’être facilement utilisable avec d’autres libraires ou frameworks.
 
-Par contre Backbone.js est uniquement une couche client. Il ne gère pas la persistance des données sur un serveur. Heureusement cela se gère très bien en utilisant l’architecture REST. Il suffit d’indiquer à nos modèles une URL et d’utiliser une API JSON Restful pour être capable de réaliser du CRUD très facilement. 
+Par contre Backbone.js est uniquement une couche client. Il ne gère pas la persistance des données sur un serveur. Heureusement cela se gère très bien en utilisant l’architecture REST. Il suffit d’indiquer à nos modèles une URL et d’utiliser une API JSON Restful pour être capable de réaliser du CRUD très facilement.
 
 
 \subsection{Dépendances}
@@ -38,7 +38,7 @@ Les composants Router et Sync fournissent des fonctionnalités très intéressan
 \subsection{Les données}
 
 
-La classe Backbone.Model est utilisé pour gérer du contenu sous la forme d’un objet JavaScript, en l’encapsulant et en proposant des méthodes accesseurs.
+La classe Backbone.Model est utilisée pour gérer du contenu sous la forme d’un objet JavaScript, en l’encapsulant et en proposant des méthodes accesseurs.
 
 La classe Backbone.Collection permet de manipuler des collections de Model. On retrouve les méthodes habituelles: push, pop, shift, unshift, add, remove, get, sort ou encore length. On retrouve également les fonctions provenant de Underscore.js
 
@@ -50,12 +50,12 @@ Sync est le composant permettant de synchroniser les objets à travers une API d
 
 Toutes les manipulations DOM se font à travers le plugin jQuery qui est de loin, le mieux armé pour ces opérations.
 
-Chaque objet Backbone.View est lié à un nœud DOM (el) et pourra le générer à nouveau, à n’importe quel moment. Le but est alors de découper le document en une multitude de vues que l’on pourra régénérer à souhait et individuellement. 
+Chaque objet Backbone.View est lié à un nœud DOM (el) et pourra le générer à nouveau, à n’importe quel moment. Le but est alors de découper le document en une multitude de vues que l’on pourra régénérer à souhait et individuellement.
 
 \subsection{Asynchronous Module Definition API}
 
 Il est possible d’utiliser Backbone.JS avec un AMD Loader comme RequireJS ou Curl. Ni Backbone.JS, ni Underscore ne supportent officiellement AMD. Toutefois, il est possible d’utiliser un fork implémentant de cette API.
-On trouve sur Github des projets templates (boilerplate) qui facilitent la mise en place d’un environnement couplant RequireJS et Backbone. 
+On trouve sur Github des projets templates (boilerplate) qui facilitent la mise en place d’un environnement couplant RequireJS et Backbone.
 
 \subsection{Plugins}
 

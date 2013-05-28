@@ -1,5 +1,33 @@
 \chapter{Base de données}
 
+\section{Introduction}
+Une base de données est un conteneur permettant de stocker l'intégralité des informations d'une application sur un serveur.
+Il existe plusieurs sortes de base de données mais j'ai décidé de n'en présenter que trois. Se sont celle utilisé en majorité dans les entreprises.
+Il s'agit des bases de données relationnelle (MySQL,PostgreSQL,Oracle, SQLserveur...), les bases de données NoSQL (MongoDB...), et récement Webstorage
+
+
+\section{SGBDR}
+Le monde du Système de Gestion de Base de Données Relationnel est actuellement boulversé par l'arrivé du NoSQL et de nouveau serveur comme Node.js
+Mais la plupart des éditeurs de base de données ont compris la nécessité de s'adapter et proposent actuellement une réponse au NoSQL et à Node.js
+
+
+\begin{center}
+\includegraphics[scale=0.8]{img/mysql-cluster.png} 
+\label{Graphique technologie mysql cluster}
+\end{center}
+
+Afin d'éviter la fuite des développeurs vers des serveurs NoSQL, Oracle par exemple à développer un connecteur NoSQL dans MySQL Cluster 7.3.
+Grâce au connecteur NoSQL de MySQL, implanté en tant que module du moteur V8 de Node.js, les utilisateurs peuvent bénéficier de fonctionnalités avancées du SGBDR avec auto-fragmentation pour les applications en plus d’un accès à NoSQL sans transformation en SQL.
+La nouvelle API NoSQL Node.js intégrée dans MySQL Cluster offre à Node.js une interface JavaScript asynchrone native qui peut être utilisée à la fois à la requête et à la réception des résultats établis directement à partir de MySQL Cluster, sans transformations en SQL. Cela garantit également une faible latence pour les requêtes simples. Ainsi il est possible en natif d'utiliser uniquement JavaScript pour parler avec MySQL Cluster.
+
+Le fait d'utiliser Node.js permet grace à sa comunauté d'avoir accès à de nombreuses extentions pour utiliser n'importe quelle bases de données relationnel.
+Certaines bases de données inclus également l'accès à la base de données par Webservices ce qui peut éviter l'utilisation d'extention.
+
+JavaScript est donc capable au travers de Node.js d'accéder à n'importe quelle base de données relationnel en écrivant ou non du SQL. Celà peut avoir un interet pour des applications spécifiques ayant besoin de contrainte ACID ou pour éviter aux développeurs et administrateurs à changer leurs habitudes.
+
+Node.js recommande l'utilisation de MongoDB qui est beaucoup plus adapté à sa philosophie que ne l'est les bases de données relationnelles. Ainsi j'ai décidé de parler beaucoup plus en détail de MongoDB et de son intégration parfaite avec Node.js et JavaScript 
+
+
 \section{MongoDB}
 \label{ch:mongodb}
 
@@ -13,7 +41,7 @@ L’écosystème de Node.js possède un excellent support de nombreuses bases de
 
 Alors pourquoi utiliser MongoDB? 
  
-MongoDB est choisit en réponse à notre problématique par un ensemble de fonctionnalités caractérisant cette base de données. 
+MongoDB est choisit en réponse à notre problématique grace un ensemble de fonctionnalités caractérisant cette base de données. 
 
 \subsection{Schéma libre}
 
@@ -74,6 +102,31 @@ Un grand merci à son interpréteur JavaScript qui permet de commencer à pratiq
 
 Comme le nombre important et croissant de pilotes est disponibles (Java, Scala, C\#, Erlang, C, C++, etc), MongoDB évolue rapidement et à été mis en open source en 2009 par 10gen l’éditeur.
 
+\section{Web Storage}
 
+\subsection{Présentation}
+
+Lorsque les développeurs Web pensent à stocker des données utilisateur, leur premier réflexe consiste à télécharger ces données sur le serveur. HTML5 vient changer tout cela, puisqu'il existe désormais plusieurs technologies permettant aux applications d'enregistrer des données sur un appareil client. Ces données peuvent également être synchronisées avec le serveur ou ne demeurer que sur ce client : la décision revient au développeur.
+
+Le stockage côté client est avantageux pour plusieurs raisons. Tout d'abord, il vous permet de faire fonctionner l'application lorsque l'utilisateur est hors connexion, et éventuellement, de synchroniser les données une fois la connexion au réseau rétablie. Ensuite, il vous permet de booster vos performances. En effet, vous avez la possibilité d'afficher un important corpus de données dès que l'utilisateur clique sur votre site, au lieu de devoir attendre qu'il soit de nouveau téléchargé. Enfin, il s'agit d'un modèle de programmation plus simple, pour lequel aucune structure de serveur n'est nécessaire.
+
+
+Le principe est vraiment très simple : c’est un stockage sous la forme clé / valeur. Il y en a deux différents :
+\begin{list}{•}{}
+  \item 
+  stockage uniquement pour la durée de la session (et uniquement pour cette instance du site, un autre onglet sur la même page n’est pas affecté) ;
+    
+  \item
+  stockage permanent.
+
+\end{list}
+ Pour chacun de ces stockages, on a un objet manipulable, respectivement sessionStorage et localStorage. Les deux objets exposent la même API.
+ 
+ Comme il s'agit d'une API, JavaScript peut l'utiliser. Ainsi il est facile de créer des applications stockant des données sur le client et n'utilisant pas de base de données. On peut également mélanger webstorage avec un serveur de base de données. Afin de permettre un mode offline d'une application web.
+
+\section{Conclusion}
+
+Actuellement les bases de données sont en évolution car de nouvelles tendances arrivent et bouscule le marché du stockage des données.
+JavaScript est capable actuellement à travers d'API dédié ou de Node.js de se connecter à n'importe quelle base de données. Que se soit une base de données relationnel, une base de données NoSQL, une base de données de données NewSQL et meme aucun serveur avec l'api Web Storage. Le fait que la plupart des bases de données NoSQL utilisent JSON font une solution très pertinentes pour stocker rapidement et simplement des données sans nécessite un travail complexe. C'est pourquoi à mon avis il est beaucoup plus pertinant d'utiliser une solution de type NoSQL comme MongoDB plutôt que le traditionnel MySQL ou autre SGBDR. Mais comme dans ma partie Client léger, il est pour l'instant trop tot pour se prononcer. Le choix reste pour l'instant aux développeurs car aucune solution ne sort actuellement du lot. La bataille se joue actuellement pour imposer le standard de la base de données Node.js. MongoDB se démarque du lot en étant disponible en natif dans Node.js
 
 

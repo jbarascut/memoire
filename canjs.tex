@@ -3,7 +3,7 @@
 
 \subsection{Présentation}
 
-Le framework CanJS est issu du framework Javascript MVC. Il s'agit en fait de l'extraction du noyau et il est décomposé en modules pour coller exactement aux besoins de l’application sans embarquer des Kilos octects de fonctionnalités inutiles. La nouvelle version de Javascript MVC se basera sur CanJS pour assurer l’inter-compatibilité des deux frameworks.
+Le framework CanJS est issu du framework Javascript MVC. Il s'agit en fait de l'extraction du noyau et il est décomposé en modules pour correspondre exactement aux besoins de l’application sans embarquer d'importants volumes de fonctionnalités inutiles. La nouvelle version de Javascript MVC se basera sur CanJS pour assurer l’inter-compatibilité des deux frameworks.
 
 Le grand intérêt de CanJS est de fournir des objets « Model » pour stocker nos données, y associer des fonctions de mise à jour coté serveur personnalisables et des événements auxquels attacher des actions. Mieux, il gère automatiquement, grâce à son système de templates, la mise à jour de toutes les vues associées à un modèle lorsque ce dernier est modifié.
 
@@ -11,29 +11,29 @@ CanJS est composé de:
 \begin{itemize}
 
     \item[\textbullet]
-	can.Construct - hérite des fonctions du constructeur
-	
-	\item[\textbullet]
-	can.Observe - clé valeur contraignante
+can.Construct - hérite des fonctions du constructeur
 
-	\item[\textbullet]
-    can.Model -  permet de connecter une interface JSON-REST
-	
-	\item[\textbullet]
+\item[\textbullet]
+    can.Observe - clé valeur contraignante
+
+\item[\textbullet]
+    can.Model - permet de connecter une interface JSON-REST
+
+\item[\textbullet]
     can.View - chargement du modèle, mise en cache
 
-	\item[\textbullet]
+\item[\textbullet]
     can.EJS - modèles contraignant direct
 
-	\item[\textbullet]
-    can.Control - liaisons d’évnements déclaratif
+\item[\textbullet]
+    can.Control - liaisons d’évènements déclaratif
     
-	\item[\textbullet]    
+\item[\textbullet]
     can.Route - support du bouton précédent et des onglets
-    	
+    
 \end{itemize}
 
-Il prend également en charge un riche ensemble d’extensions et plugins.
+Il prend également en charge un riche ensemble d’extensions et de plugins.
 
 \subsection{Caractéristiques vs Poids}
 
@@ -59,22 +59,22 @@ En plus de jQuery, CanJS fait 8.5kb. A titre d’exemple voici quelques autres b
 
 \end{itemize}
 
-Pour être juste, le poids est trompeur, car chaque bibliothèque possède un ensemble différent de fonctionnalités. Cependant, CanJS fournit tout ce dont vous avec besoin pour créer une applications coté client riche, avec la bibliothèque la plus légère parmi celle comparé.
-Par comparaison Backbone.js est livré le micro template Underscore.js, mais ceux-ci ne se compare pas à la puissance de EJS. La plupart des applications réseau de base comprennent également un moteur de templates qui ajoute du poids à la bibliothèque. 
+Pour être juste, le poids est trompeur, car chaque bibliothèque possède un ensemble différent de fonctionnalités. Cependant, CanJS fournit tout ce dont vous avec besoin pour créer une application coté client riche, avec la bibliothèque la plus légère parmi celles que nous avons comparées.
+Par comparaison Backbone.js est livré le micro template Underscore.js, mais celui-ci ne se compare pas à la puissance de EJS. La plupart des applications réseau de base comprennent également un moteur de templates qui ajoute du poids à la bibliothèque.
 
 \subsection{Facilité d’utilisation}
 
-CanJS bénéficie d’une courbe d’apprentissage plus facile que n’importe quelles autres biblothèques. CanJS bénéficie d’une bonne documentation. Il permet de se faire la main avec la page de présentation, puis de plonger plus profondément en lisant chaque méthodes et classe dans la page de documentation. CanJS permet de voir comment les applications sont construites en parcourant les exemples, en lisant les annotations et en regardant les jeux de tests. Un blog permet d’en savoir toujours plus sur CanJS, et il est possible de poser des questions sur le forum. Twitter ou d’obtenir un support premium, de formations ou de conseil.
+CanJS bénéficie d’une courbe d’apprentissage plus facile que n’importe quelle autre biblothèque. Il bénéficie d’une bonne documentation, et il permet de se faire la main avec la page de présentation, puis de plonger plus profondément en lisant chaque méthodes et classes dans la page de documentation. CanJS permet de voir comment les applications sont construites en parcourant les exemples, en lisant les annotations et en regardant les jeux de tests. Un blog permet d’en savoir toujours plus sur CanJS, et il est possible de poser des questions sur le forum, Twitter ou d’obtenir un support premium, de formations ou de conseil.
 
 \subsection{Prévention des fuites mémoire}
 
-CanJS empêche les fuites de mémoire qu’un développeur ne connait problablement pas et a dans son application. Les applications JavaScript ont communément des fuites mémoire de deux sources: les gestionnaires d’évenements et les objets inutilisées.
+CanJS empêche les fuites de mémoire qu’un développeur ne connait problablement pas et a dans son application. Les applications JavaScript ont communément des fuites mémoire de deux sources: les gestionnaires d’évenements et les objets inutilisés.
 Autant dire qu’il s’agit d’un problème critique pour les client MVC. CanJS gère ces fuites automatiquement ce qui rend presque impossible une fuite mémoire dans l’application.
 
 \subsection{Performance}
 
 CanJS est optimisé pour la performance dans des domaines clés.
-Par exemple la liaison en temps réel est optimisé pour les performances en modifiant directement et exactement ce qui doit être mis à jour, plutôt que le modèle en entier.
+Par exemple la liaison en temps réel est optimisée pour les performances en modifiant directement et exactement ce qui doit être mis à jour, plutôt que le modèle en entier.
 
 Voici un schéma mesurant les performance de CanJS en fonction d’autres frameworks.
 
@@ -86,7 +86,7 @@ Voici un schéma mesurant les performance de CanJS en fonction d’autres framew
 
 \subsection{Support de librairie}
 
-CanJS permet d'intègrer cinq des bibliothèques les plus couramment utilisés pour l’accès au DOM:
+CanJS permet d'intègrer cinq des bibliothèques les plus couramment utilisées pour l’accès au DOM:
 
 \begin{center}
 \includegraphics[scale=0.5]{img/CanJSlibraries.png}
@@ -95,4 +95,4 @@ CanJS permet d'intègrer cinq des bibliothèques les plus couramment utilisés p
 
 Cela donne la possibilité de choisir la bibliothèque préférée ou passer même facilement par une autre bibliothèque sans avoir a réécrire la couche MVC de votre application.
 
-Il y’a une intégration profonde avec chaque bibliothèque afin de permettre une utilisation complète peut importe la librairie choisie.
+Il y a une intégration profonde avec chaque bibliothèque afin de permettre une utilisation complète et ce peu importe la librairie choisie.
