@@ -62,12 +62,16 @@
 \setlength{\parindent}{0cm} % Défini la largeur de l'alinéa de 0cm.
 \pagestyle{plain}
 
+\usepackage{titlesec} 
+\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{} 
+
+
 \begin{document}
  
 \maketitle
 
 \begin{abstract}
-Le résune en français de mon article.
+Le résumé en français de mon article.
 \end{abstract}
  
 \begin{abstract}
@@ -108,6 +112,7 @@ Le résumé (abstract en anglais) de mon article.
 \include{npm}
 \include{socketio}
 \include{meteor}
+\include{cserveur}
 
 %base de données
 \include{mongodb}
@@ -132,13 +137,14 @@ Le résumé (abstract en anglais) de mon article.
 
 %futur
 \include{ecma6}
+\include{futur}
 
 %conclusion
 \include{conclusion}
  
-\index{blabla}
+%\index{blabla}
  
 %\listoffigures
-%\listoftables
+\listoftables
 \printindex
 \end{document}
